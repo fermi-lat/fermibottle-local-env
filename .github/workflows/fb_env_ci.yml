@@ -46,10 +46,10 @@ jobs:
     # Method A: Execute a named task from your pixi.toml
     - name: Run Pixi Task
       run: |
-        pixi install --manifest-path environments/pixi.toml
+        pixi install --manifest-path environments/pixi.toml --run-post-link-scripts
         # --frozen 
         # -e fermi
-        pixi run --manifest-path environments/pixi.toml fermi-env
+        pixi run --manifest-path environments/pixi.toml fermi-env --run-post-link-scripts
       #pixi run test
 
     # Method B: Use Pixi's custom shell wrapper for multiple inline commands
