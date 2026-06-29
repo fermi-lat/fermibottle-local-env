@@ -37,8 +37,13 @@ ipykernel = ">=7.3.0"
 nbmake = ">=1.5.0" # 1.5.5
 nb_conda_kernels = ">=2.5.1"
 numpy = "==1.26.4"
-# pgplot \
-# healpy \
+xorg-libxt = "*" 
+pgplot = "*"
+healpy = "*"
+libpng = "*"
+matplotlib = "*"
+scipy = "*"
+pytest-xdist = "*"
 # jupyter \
 # astropy-iers-data \
 # libpng \
@@ -50,7 +55,6 @@ numpy = "==1.26.4"
 #  seaborn \
 #  junit-xml \
 #  pytest-xdist
-
 
 [pypi-dependencies]
 pyds9 = ">=1.8.1, <2"
