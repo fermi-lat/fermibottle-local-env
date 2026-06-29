@@ -1,0 +1,81 @@
+[workspace]
+authors = ["Malte Busmann <m.busmann@physik.lmu.de>"]
+channels = ["conda-forge", "fermi", "threeml/label/dev" ]
+name = "Fermi_Summer_School_2026"
+platforms = ["linux-64", "osx-arm64",  "osx-64", "linux-aarch64"]
+version = "0.1.0"
+
+[tasks]
+notebook = "jupyter notebook --ip 00.00.00.00 --no-browser"
+fshell = "pixi shell"
+
+[tasks.notebook-fermi]
+depends-on = [
+  { task = "notebook", environment = "fermi" },
+]
+
+[tasks.fermi-env]
+depends-on = [
+  { task = "fshell", environment = "fermi" },
+]
+
+# [tasks.notebook-fermigbm]
+# depends-on = [
+#   { task = "notebook", environment = "fermigbm" },
+# ]
+
+[dependencies]
+python = "3.11.*"
+jupyter = ">=1.1.1,<2"
+jupyterlab = ">=4.5.7,<5"
+astropy = ">=7.2.0"
+junit-xml = ">=1.0" # 1.0
+pytest = ">=8.3.4"
+ipyparallel = ">=9.2.0,<10"
+taplo = ">=0.9.3"
+ipykernel = ">=7.3.0"
+nbmake = ">=1.5.0" # 1.5.5
+nb_conda_kernels = ">=2.5.1"
+numpy = "==1.26.4"
+# pgplot \
+# healpy \
+# jupyter \
+# astropy-iers-data \
+# libpng \
+#  matplotlib \
+# pytest \
+# conda-forge::nbmake \
+# scipy \
+# pmw \
+#  seaborn \
+#  junit-xml \
+#  pytest-xdist
+
+
+[pypi-dependencies]
+pyds9 = ">=1.8.1, <2"
+
+# [target.linux-aarch64.dependencies]
+# Add aarch64 specific dependencies here if needed
+# astromodule  = { git = "https://github.com/threeML/astromodels.git"}
+
+[feature.fermi.dependencies]
+astropy = ">=7.2.0"
+numpy = "==1.26.4"
+fermitools = "==2.5.1"
+gammapy = "<2.1"
+fermipy = ">=1.4.1"
+astromodels = ">=2.5.0" 
+threeml = ">=2.5.0" 
+
+# [feature.fermigbm.dependencies]
+# basemap = ">=2.0.0,<3"
+
+# [feature.fermigbm.pypi-dependencies]
+# gbm-data-tools = { path = "gbm_data_tools-1.1.1" }
+
+[environments.fermi]
+features = ["default", "fermi"]
+
+# [environments.fermigbm]
+# features = ["default", "fermigbm"]
