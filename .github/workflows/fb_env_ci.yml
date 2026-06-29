@@ -38,15 +38,16 @@ jobs:
       with:
         # Automatically installs dependencies and enables caching
         cache: true 
-        pixi-version: v0.10.0
-        # environments: fermi # or your specific environment name
+        # pixi-version: v0.10.0
+        environments: fermi # or your specific environment name
         # v0.70.2
         manifest-path: environments/pixi.toml
 
     # Method A: Execute a named task from your pixi.toml
     - name: Run Pixi Task
       run: |
-        pixi install --frozen 
+        pixi install 
+        # --frozen 
         # -e fermi
         pixi run --manifest-path environments/pixi.toml fermi-env
       #pixi run test
