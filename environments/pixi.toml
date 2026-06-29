@@ -1,6 +1,6 @@
 [workspace]
 authors = ["Malte Busmann <m.busmann@physik.lmu.de>"]
-channels = ["conda-forge", "fermi", "threeml/label/dev" ]
+channels = ["conda-forge", "fermi/label/dev", "fermi", "threeml/label/dev" ]
 name = "Fermi_Summer_School_2026"
 platforms = ["linux-64", "osx-arm64",  "osx-64", "linux-aarch64"]
 version = "0.1.0"
