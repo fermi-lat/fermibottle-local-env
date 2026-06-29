@@ -46,7 +46,7 @@ jobs:
     # Method A: Execute a named task from your pixi.toml
     - name: Run Pixi Task
       run: |
-        pixi install 
+        pixi install --manifest-path environments/pixi.toml
         # --frozen 
         # -e fermi
         pixi run --manifest-path environments/pixi.toml fermi-env
