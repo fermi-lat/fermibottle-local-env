@@ -43,7 +43,7 @@ jobs:
 
     # Method A: Execute a named task from your pixi.toml
     - name: Run Pixi Task
-      run: pixi run -e fermi fermi-env
+      run: pixi run --manifest-path environments/pixi.toml -e fermi fermi-env
       #pixi run test
 
     # Method B: Use Pixi's custom shell wrapper for multiple inline commands
