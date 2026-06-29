@@ -39,7 +39,7 @@ jobs:
         # Automatically installs dependencies and enables caching
         cache: true 
         pixi-version: v0.10.0
-        environments: fermi # or your specific environment name
+        # environments: fermi # or your specific environment name
         # v0.70.2
         manifest-path: environments/pixi.toml
 
