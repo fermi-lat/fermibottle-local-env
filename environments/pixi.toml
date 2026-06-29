@@ -25,6 +25,7 @@ depends-on = [
 # ]
 
 [dependencies]
+regions = "<0.12"
 python = "3.11.*"
 jupyter = ">=1.1.1,<2"
 jupyterlab = ">=4.5.7,<5"
@@ -47,6 +48,7 @@ libpng = "*"
 matplotlib = "*"
 scipy = "*"
 pytest-xdist = "*"
+pmw = "*"
 # jupyter \
 # astropy-iers-data \
 #  matplotlib \

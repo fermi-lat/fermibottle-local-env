@@ -167,6 +167,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-64/pgplot-5.2.2-hbeaba86_1009.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/pillow-12.2.0-py311hf88fc01_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/pixman-0.46.4-h54a6638_1.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/pmw-2.1.1-py311h38be061_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/prometheus-cpp-1.3.0-ha5d0236_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/propcache-0.5.2-py311h3778330_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/psutil-7.2.2-py311haee01d2_0.conda
@@ -182,6 +183,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-64/qt6-main-6.11.1-pl5321h16c4a6b_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/re2-2025.11.05-h5301d42_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/readline-8.3-h853b02a_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/regions-0.11-py311h0372a8f_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/rpds-py-2026.5.1-py311h1baac5b_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/s2n-1.7.4-h92489ea_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/scipy-1.17.1-py311hbe70eeb_1.conda
@@ -536,6 +538,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/pgplot-5.2.2-h953139c_1009.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/pillow-12.2.0-py311h8e17b9e_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/pixman-0.46.4-h7ac5ae9_1.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/pmw-2.1.1-py311hec3470c_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/prometheus-cpp-1.3.0-h7938499_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/propcache-0.5.2-py311h164a683_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/psutil-7.2.2-py311h51cfe5d_0.conda
@@ -551,6 +554,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/qt6-main-6.11.1-pl5321heaece2b_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/re2-2025.11.05-he0da282_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/readline-8.3-hb682ff5_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/regions-0.11-py311h1ed8e69_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/rpds-py-2026.5.1-py311h3b69377_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/s2n-1.7.4-h5288e76_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/scipy-1.17.1-py311had2d2e4_1.conda
@@ -1034,6 +1038,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/osx-64/pgplot-5.2.2-h2d2bcf7_1009.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-64/pillow-12.2.0-py311h27c473c_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-64/pixman-0.46.4-ha059160_1.conda
+      - conda: https://conda.anaconda.org/conda-forge/osx-64/pmw-2.1.1-py311h6eed73b_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-64/prometheus-cpp-1.3.0-h7802330_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-64/propcache-0.5.2-py311ha8ae342_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-64/psutil-7.2.2-py311ha332486_0.conda
@@ -1049,6 +1054,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/osx-64/qhull-2020.2-h3c5361c_5.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-64/re2-2025.11.05-h77e0585_1.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-64/readline-8.3-h68b038d_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/osx-64/regions-0.11-py311ha837bc1_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-64/rpds-py-2026.5.1-py311hcd3406c_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-64/scipy-1.17.1-py311h556693a_1.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-64/snappy-1.2.2-h01f5ddf_1.conda
@@ -1355,6 +1361,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/pgplot-5.2.2-hde848ab_1009.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/pillow-12.2.0-py311hd37aea2_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/pixman-0.46.4-h81086ad_1.conda
+      - conda: https://conda.anaconda.org/conda-forge/osx-arm64/pmw-2.1.1-py311h267d04e_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/prometheus-cpp-1.3.0-h0967b3e_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/propcache-0.5.2-py311hc290fe0_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/psutil-7.2.2-py311he363849_0.conda
@@ -1370,6 +1377,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/qhull-2020.2-h420ef59_5.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/re2-2025.11.05-ha480c28_1.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/readline-8.3-h46df422_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/osx-arm64/regions-0.11-py311h09efe57_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/rpds-py-2026.5.1-py311haff49d3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/scipy-1.17.1-py311h9a58382_1.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/snappy-1.2.2-hada39a4_1.conda
@@ -1569,6 +1577,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-64/pgplot-5.2.2-hbeaba86_1009.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/pillow-12.2.0-py311hf88fc01_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/pixman-0.46.4-h54a6638_1.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/pmw-2.1.1-py311h38be061_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/prometheus-cpp-1.3.0-ha5d0236_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/propcache-0.5.2-py311h3778330_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/psutil-7.2.2-py311haee01d2_0.conda
@@ -1588,7 +1597,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-64/qt6-main-6.11.1-pl5321h16c4a6b_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/re2-2025.11.05-h5301d42_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/readline-8.3-h853b02a_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/linux-64/regions-0.12-py311h0372a8f_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/regions-0.11-py311h0372a8f_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/reproject-0.20.0-py311h0372a8f_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/rpds-py-2026.5.1-py311h1baac5b_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/s2n-1.7.4-h92489ea_1.conda
@@ -2016,6 +2025,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/pgplot-5.2.2-h953139c_1009.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/pillow-12.2.0-py311h8e17b9e_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/pixman-0.46.4-h7ac5ae9_1.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/pmw-2.1.1-py311hec3470c_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/prometheus-cpp-1.3.0-h7938499_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/propcache-0.5.2-py311h164a683_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/psutil-7.2.2-py311h51cfe5d_0.conda
@@ -2033,7 +2043,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/qt6-main-6.11.1-pl5321heaece2b_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/re2-2025.11.05-he0da282_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/readline-8.3-hb682ff5_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/regions-0.12-py311h1ed8e69_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/regions-0.11-py311h1ed8e69_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/rpds-py-2026.5.1-py311h3b69377_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/s2n-1.7.4-h5288e76_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/scipy-1.17.1-py311had2d2e4_1.conda
@@ -2613,6 +2623,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/osx-64/pandas-3.0.3-py311h2a74ac8_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-64/pgplot-5.2.2-h2d2bcf7_1009.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-64/pillow-12.2.0-py311h27c473c_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/osx-64/pmw-2.1.1-py311h6eed73b_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-64/prometheus-cpp-1.3.0-h7802330_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-64/propcache-0.5.2-py311ha8ae342_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-64/psutil-7.2.2-py311ha332486_0.conda
@@ -2632,7 +2643,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/osx-64/qhull-2020.2-h3c5361c_5.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-64/re2-2025.11.05-h77e0585_1.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-64/readline-8.3-h68b038d_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/osx-64/regions-0.12-py311h28f00fc_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/osx-64/regions-0.11-py311ha837bc1_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-64/reproject-0.20.0-py311h28f00fc_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-64/rpds-py-2026.5.1-py311hcd3406c_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-64/scikit-image-0.20.0-py311hd84f3f5_1.conda
@@ -2998,6 +3009,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/pandas-3.0.3-py311h8948835_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/pgplot-5.2.2-hde848ab_1009.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/pillow-12.2.0-py311hd37aea2_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/osx-arm64/pmw-2.1.1-py311h267d04e_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/prometheus-cpp-1.3.0-h0967b3e_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/propcache-0.5.2-py311hc290fe0_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/psutil-7.2.2-py311he363849_0.conda
@@ -3017,7 +3029,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/qhull-2020.2-h420ef59_5.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/re2-2025.11.05-ha480c28_1.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/readline-8.3-h46df422_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/osx-arm64/regions-0.12-py311h48bb571_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/osx-arm64/regions-0.11-py311h09efe57_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/reproject-0.20.0-py311h48bb571_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/rpds-py-2026.5.1-py311haff49d3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/scikit-image-0.20.0-py311h4eec4a9_1.conda
@@ -6078,6 +6090,17 @@ packages:
     - pixman >=0.46.4,<1.0a0
   size: 450960
   timestamp: 1754665235234
+- conda: https://conda.anaconda.org/conda-forge/linux-64/pmw-2.1.1-py311h38be061_0.conda
+  sha256: 73e28429558514970fea73c69f6ecb6ac2aba33d877144c72ce0b617abd5f902
+  md5: 8ee572dc6e309a57a8c44b0741c73a81
+  depends:
+  - python >=3.11,<3.12.0a0
+  - python_abi 3.11.* *_cp311
+  license: MIT
+  license_family: MIT
+  run_exports: {}
+  size: 637918
+  timestamp: 1761504290214
 - conda: https://conda.anaconda.org/conda-forge/linux-64/prometheus-cpp-1.3.0-ha5d0236_0.conda
   sha256: 013669433eb447548f21c3c6b16b2ed64356f726b5f77c1b39d5ba17a8a4b8bc
   md5: a83f6a2fdc079e643237887a37460668
@@ -6486,24 +6509,22 @@ packages:
     - readline >=8.3,<9.0a0
   size: 345073
   timestamp: 1765813471974
-- conda: https://conda.anaconda.org/conda-forge/linux-64/regions-0.12-py311h0372a8f_0.conda
-  sha256: 401b3910ccd2cc1b6905789afcc1cda793d70d82fbe5b89e5b37d661229e13ca
-  md5: 699413e13eb662c6bb657c3b8f25d1fe
+- conda: https://conda.anaconda.org/conda-forge/linux-64/regions-0.11-py311h0372a8f_0.conda
+  sha256: ad600af8049b741b83684a0e6e078e4fcefd42a676ea8537fb206d89d0adb71e
+  md5: 8af4b12f704c158aa93eae3a447a5f0a
   depends:
   - __glibc >=2.17,<3.0.a0
-  - astropy-base >=6.1.7
+  - astropy-base >=6.0
   - libgcc >=14
-  - matplotlib-base >=3.9
+  - matplotlib-base >=3.8
   - numpy >=1.23,<3
   - python >=3.11,<3.12.0a0
   - python_abi 3.11.* *_cp311
   license: BSD-3-Clause
   license_family: BSD
-  purls:
-  - pkg:pypi/regions?source=hash-mapping
   run_exports: {}
-  size: 603133
-  timestamp: 1782346415551
+  size: 353738
+  timestamp: 1762373093727
 - conda: https://conda.anaconda.org/conda-forge/linux-64/reproject-0.20.0-py311h0372a8f_0.conda
   sha256: c468be3c919921540e776a581d8b01c576c0164f522d92c408ed2d6aa28e0b99
   md5: 5bfbedbfb97e91ef11d5b7e0b983b61a
@@ -10036,6 +10057,18 @@ packages:
     - pixman >=0.46.4,<1.0a0
   size: 357913
   timestamp: 1754665583353
+- conda: https://conda.anaconda.org/conda-forge/linux-aarch64/pmw-2.1.1-py311hec3470c_0.conda
+  sha256: 5a16bd588e0f1237b78aea184ae56d08f733adc1a0fa371fc40c6e66ae1e4876
+  md5: 98a6cee0e0beeb0d871ff64ee856c989
+  depends:
+  - python >=3.11,<3.12.0a0
+  - python >=3.11,<3.12.0a0 *_cpython
+  - python_abi 3.11.* *_cp311
+  license: MIT
+  license_family: MIT
+  run_exports: {}
+  size: 639999
+  timestamp: 1761504459987
 - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/prometheus-cpp-1.3.0-h7938499_0.conda
   sha256: 9350d7bbc3982a732ff13a7fd17b585509e3b7d0191ac7b810cc3224868e3648
   md5: 10f4301290e51c49979ff98d1bdf2556
@@ -10400,24 +10433,22 @@ packages:
     - readline >=8.3,<9.0a0
   size: 357597
   timestamp: 1765815673644
-- conda: https://conda.anaconda.org/conda-forge/linux-aarch64/regions-0.12-py311h1ed8e69_0.conda
-  sha256: 5431c5925c342828de6e79860800684fef662e88afe624abf94201c4640d4bda
-  md5: 121dbf18fe2c18f536976ac7721606ac
+- conda: https://conda.anaconda.org/conda-forge/linux-aarch64/regions-0.11-py311h1ed8e69_0.conda
+  sha256: 4812c19381457224102b784a9cec49de1655dc7ac18961cdf141a77796a059d1
+  md5: 38e2976dc6f6eadf5b321f10d2e53e49
   depends:
-  - astropy-base >=6.1.7
+  - astropy-base >=6.0
   - libgcc >=14
-  - matplotlib-base >=3.9
+  - matplotlib-base >=3.8
   - numpy >=1.23,<3
   - python >=3.11,<3.12.0a0
   - python >=3.11,<3.12.0a0 *_cpython
   - python_abi 3.11.* *_cp311
   license: BSD-3-Clause
   license_family: BSD
-  purls:
-  - pkg:pypi/regions?source=hash-mapping
   run_exports: {}
-  size: 602156
-  timestamp: 1782346465541
+  size: 351351
+  timestamp: 1762373049501
 - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/rpds-py-2026.5.1-py311h3b69377_0.conda
   sha256: 2ef4cfe26fdf3e641f3dadc8e579b0c7d9227dc4982dc77650e24acd46f3a5a6
   md5: 8e4da54d10a52b452588d56a9e902fa8
@@ -16762,6 +16793,17 @@ packages:
     - pixman >=0.46.4,<1.0a0
   size: 390942
   timestamp: 1754665233989
+- conda: https://conda.anaconda.org/conda-forge/osx-64/pmw-2.1.1-py311h6eed73b_0.conda
+  sha256: c96045391779cb288a3433c506ec8818406cfe52638612b47526d675b9d072fc
+  md5: 20b8da0107f69c08041fe7076d330f39
+  depends:
+  - python >=3.11,<3.12.0a0
+  - python_abi 3.11.* *_cp311
+  license: MIT
+  license_family: MIT
+  run_exports: {}
+  size: 641026
+  timestamp: 1761504605976
 - conda: https://conda.anaconda.org/conda-forge/osx-64/prometheus-cpp-1.3.0-h7802330_0.conda
   sha256: af754a477ee2681cb7d5d77c621bd590d25fe1caf16741841fc2d176815fc7de
   md5: f36107fa2557e63421a46676371c4226
@@ -17080,23 +17122,21 @@ packages:
     - readline >=8.3,<9.0a0
   size: 317819
   timestamp: 1765813692798
-- conda: https://conda.anaconda.org/conda-forge/osx-64/regions-0.12-py311h28f00fc_0.conda
-  sha256: 0608e8616ab0f146479ed93d11654150d1c6435c8a8557be2c90fa4248e2a5f4
-  md5: 9f54ca18cd28eee67928cfd49e8dd46a
+- conda: https://conda.anaconda.org/conda-forge/osx-64/regions-0.11-py311ha837bc1_0.conda
+  sha256: b75ef388d1cf6cd0e2458416a81f23cff99574e9c089834eaf468b6f8d34c337
+  md5: 012a78a000bb8ec566c72a882a807daa
   depends:
-  - __osx >=11.0
-  - astropy-base >=6.1.7
-  - matplotlib-base >=3.9
+  - __osx >=10.13
+  - astropy-base >=6.0
+  - matplotlib-base >=3.8
   - numpy >=1.23,<3
   - python >=3.11,<3.12.0a0
   - python_abi 3.11.* *_cp311
   license: BSD-3-Clause
   license_family: BSD
-  purls:
-  - pkg:pypi/regions?source=hash-mapping
   run_exports: {}
-  size: 568139
-  timestamp: 1782347108829
+  size: 343955
+  timestamp: 1762373428718
 - conda: https://conda.anaconda.org/conda-forge/osx-64/reproject-0.20.0-py311h28f00fc_0.conda
   sha256: fe0a181eb12b0bb7602e4d7572e2d1da0c7019c53f04e7ee1a13ff62ce0ecbb2
   md5: 246de9ffb03a3c0c0713d5cdd0e4c4ba
@@ -19983,6 +20023,18 @@ packages:
     - pixman >=0.46.4,<1.0a0
   size: 248045
   timestamp: 1754665282033
+- conda: https://conda.anaconda.org/conda-forge/osx-arm64/pmw-2.1.1-py311h267d04e_0.conda
+  sha256: 5cb90f360036724a3c47e2e9c603ac6d86a4e67c9a845cf7385562b992a9049b
+  md5: 49142e5b1bad534ac430e857a8666937
+  depends:
+  - python >=3.11,<3.12.0a0
+  - python >=3.11,<3.12.0a0 *_cpython
+  - python_abi 3.11.* *_cp311
+  license: MIT
+  license_family: MIT
+  run_exports: {}
+  size: 640949
+  timestamp: 1761504646936
 - conda: https://conda.anaconda.org/conda-forge/osx-arm64/prometheus-cpp-1.3.0-h0967b3e_0.conda
   sha256: 851a77ae1a8e90db9b9f3c4466abea7afb52713c3d98ceb0d37ba6ff27df2eff
   md5: 7172339b49c94275ba42fec3eaeda34f
@@ -20310,24 +20362,22 @@ packages:
     - readline >=8.3,<9.0a0
   size: 313930
   timestamp: 1765813902568
-- conda: https://conda.anaconda.org/conda-forge/osx-arm64/regions-0.12-py311h48bb571_0.conda
-  sha256: 7dc9df54f9f404de518e7de22ddf57cb1e24f8edf85d526bceeeb0368ab62c00
-  md5: e6e1e39b63a09163016b3dbae6686f6e
+- conda: https://conda.anaconda.org/conda-forge/osx-arm64/regions-0.11-py311h09efe57_0.conda
+  sha256: 5ee333e57b2b7db523042f6be88de5f2c404c3288cd7b552a09783fc7cb3f343
+  md5: f7027c677eafbec18f6b05dec9343a9a
   depends:
   - __osx >=11.0
-  - astropy-base >=6.1.7
-  - matplotlib-base >=3.9
+  - astropy-base >=6.0
+  - matplotlib-base >=3.8
   - numpy >=1.23,<3
   - python >=3.11,<3.12.0a0
   - python >=3.11,<3.12.0a0 *_cpython
   - python_abi 3.11.* *_cp311
   license: BSD-3-Clause
   license_family: BSD
-  purls:
-  - pkg:pypi/regions?source=hash-mapping
   run_exports: {}
-  size: 563948
-  timestamp: 1782347252471
+  size: 342923
+  timestamp: 1762373561226
 - conda: https://conda.anaconda.org/conda-forge/osx-arm64/reproject-0.20.0-py311h48bb571_0.conda
   sha256: 02a170d8726d80f516252cd069cfbfc959e14c59a3fe778ff605ddac275a5fec
   md5: d61cdf00b1497ca3e7c66f51df0a6efa
