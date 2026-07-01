@@ -1,0 +1,82 @@
+name: Master CI/CD workflow for FermiBottle Env builds
+on:
+  push:
+    branches: main # ${{github.ref_name}} not allowed here.
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'
+        required: true
+        default: 'warning'
+  schedule:
+    # Run only Monday morning starting at 1am EST
+    - cron: '0 6 * * 1'
+
+jobs:
+  pixi-ci:
+    name: Test ${{ matrix.pixi-platform }}
+    runs-on: ${{ matrix.runner }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - pixi-platform: linux-64
+            runner: ubuntu-24.04
+          - pixi-platform: linux-aarch64
+            runner: ubuntu-24.04-arm
+          - pixi-platform: osx-64
+            runner: macos-15-intel
+          - pixi-platform: osx-arm64
+            runner: macos-15
+
+    steps:
+    # 1. Check out the source code
+    - name: Checkout repository
+      uses: actions/checkout@v6
+
+    # 2. Set up Pixi and install dependencies
+    - name: Set up Pixi
+      uses: prefix-dev/setup-pixi@v0.10.0
+      with:
+        # Automatically installs dependencies and enables caching
+        cache: true 
+        # pixi-version: v0.10.0
+        environments: fermi # or your specific environment name
+        # v0.70.2
+        manifest-path: environments/pixi.toml
+
+    # Method A: Execute a named task from your pixi.toml
+    - name: Run Pixi Task
+      run: |
+        pixi install --manifest-path environments/pixi.toml --run-post-link-scripts
+        # --frozen 
+        # -e fermi
+        # pixi run --manifest-path environments/pixi.toml fermi-env --run-post-link-scripts
+        pixi run --manifest-path environments/pixi.toml -e fermi bash  scripts/test_fermi_pixi_internal.sh
+      #pixi run test
+
+    # Method B: Use Pixi's custom shell wrapper for multiple inline commands
+    # - name: Run inline scripts inside Pixi environment
+    #  shell: pixi run bash -e {0}
+    #  run: |
+        # python --version
+        # bash  scripts/test_fermibottle_pixi.sh
+        # pytest tests/
+
+
+    # The layout for this reporting action works. Not sure if there is something better, but it does a good job for us.
+    - name: Publish Test Results Linux
+      uses: EnricoMi/publish-unit-test-result-action/linux@v2
+      if: runner.os == 'Linux'
+      with:
+        check_name: "Test Results: Conda Baseline ${{ matrix.runner }}"
+        files: |
+           ${{ github.workspace }}/test_results/ST-unit-test-Output.xml
+
+    - name: Publish Test Results OSX
+      uses: EnricoMi/publish-unit-test-result-action/macos@v2
+      if: runner.os == 'macOS'
+      with:
+        check_name: "Test Results: Conda Baseline ${{ matrix.runner }}"
+        files: |
+           ${{ github.workspace }}/test_results/ST-unit*.xml

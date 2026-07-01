@@ -52,7 +52,7 @@ jobs:
         # --frozen 
         # -e fermi
         # pixi run --manifest-path environments/pixi.toml fermi-env --run-post-link-scripts
-        pixi run --manifest-path environments/pixi.toml -e fermi bash  scripts/test_fermibottle_pixi.sh
+        pixi run --manifest-path environments/pixi.toml -e fermi bash  scripts/test_fermi_pixi_notebooks_summer_school.sh
       #pixi run test
 
     # Method B: Use Pixi's custom shell wrapper for multiple inline commands
