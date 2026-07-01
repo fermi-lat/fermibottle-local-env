@@ -25,13 +25,18 @@ depends-on = [
 # ]
 
 [dependencies]
-regions = "<0.12"
+git = "*"
+pipx = "*"
+# regions = "<0.12"
+regions = "*"
 python = "3.11.*"
 jupyter = ">=1.1.1,<2"
 jupyterlab = ">=4.5.7,<5"
 astropy = ">=7.2.0"
-junit-xml = ">=1.0" # 1.0
-pytest = ">=8.3.4"
+# junit-xml = ">=1.0" # 1.0
+# pytest = ">=8.3.4"
+pytest = "*"
+junit-xml = "*"
 ipyparallel = ">=9.2.0,<10"
 taplo = ">=0.9.3"
 ipykernel = ">=7.3.0"
@@ -49,25 +54,21 @@ matplotlib = "*"
 scipy = "*"
 pytest-xdist = "*"
 pmw = "*"
+seaborn = "*"
 # jupyter \
 # astropy-iers-data \
 #  matplotlib \
-# pytest \
 # conda-forge::nbmake \
-# pmw \
-#  seaborn \
-#  junit-xml \
-#  pytest-xdist
 
 # [pypi-dependencies]
 #pyds9 = ">=1.8.1, <2"
 
 [feature.fermi.dependencies]
-astropy = ">=7.2.0"
-numpy = "==1.26.4"
+# astropy = ">=7.2.0"
+# numpy = "==1.26.4"
 fermitools = "==2.5.1"
-gammapy = "<2.1"
-fermipy = ">=1.4.1"
+gammapy = ">=2.0"
+fermipy = ">=1.4.2"
 astromodels = ">=2.5.0" 
 threeml = ">=2.5.0" 
 
