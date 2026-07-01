@@ -1,4 +1,4 @@
-name: Master CI/CD workflow for FermiBottle Env builds
+name: Main CI/CD workflow for Pixi Fermi Env builds running just internal tests.
 on:
   push:
     branches: main # ${{github.ref_name}} not allowed here.
@@ -53,6 +53,8 @@ jobs:
         # -e fermi
         # pixi run --manifest-path environments/pixi.toml fermi-env --run-post-link-scripts
         pixi run --manifest-path environments/pixi.toml -e fermi bash  scripts/test_fermi_pixi_internal.sh
+        ls -l "${HOME}/shared-testing/"
+        ls -l ${{ github.workspace }}
       #pixi run test
 
     # Method B: Use Pixi's custom shell wrapper for multiple inline commands
@@ -71,7 +73,7 @@ jobs:
       with:
         check_name: "Test Results: Conda Baseline ${{ matrix.runner }}"
         files: |
-           ${{ github.workspace }}/test_results/ST-unit-test-Output.xml
+           $HOME/test_results/*.xml
 
     - name: Publish Test Results OSX
       uses: EnricoMi/publish-unit-test-result-action/macos@v2
@@ -79,4 +81,4 @@ jobs:
       with:
         check_name: "Test Results: Conda Baseline ${{ matrix.runner }}"
         files: |
-           ${{ github.workspace }}/test_results/ST-unit*.xml
+           $HOME/test_results/*.xml

@@ -1,7 +1,5 @@
-name: Master CI/CD workflow for FermiBottle Env builds
+name: Testing workflow for Pixi Fermi Env builds with Analysis Threads notebooks 
 on:
-  push:
-    branches: main # ${{github.ref_name}} not allowed here.
   workflow_dispatch:
     inputs:
       logLevel:
@@ -62,3 +60,21 @@ jobs:
         # python --version
         # bash  scripts/test_fermibottle_pixi.sh
         # pytest tests/
+
+
+    # The layout for this reporting action works. Not sure if there is something better, but it does a good job for us.
+    - name: Publish Test Results Linux
+      uses: EnricoMi/publish-unit-test-result-action/linux@v2
+      if: runner.os == 'Linux'
+      with:
+        check_name: "Test Results: Conda Baseline ${{ matrix.runner }}"
+        files: |
+           $HOME/test_results/*.xml
+
+    - name: Publish Test Results OSX
+      uses: EnricoMi/publish-unit-test-result-action/macos@v2
+      if: runner.os == 'macOS'
+      with:
+        check_name: "Test Results: Conda Baseline ${{ matrix.runner }}"
+        files: |
+           $HOME/test_results/*.xml
