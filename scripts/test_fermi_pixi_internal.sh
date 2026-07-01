@@ -1,8 +1,9 @@
 #!/bin/bash
+LOG_DIR="${1:-/}"
 
 # --- Configuration ---
 ENV_NAME="fermi"                # Name of your conda environment
-TESTING_BASE="${HOME}/shared-testing/"
+TESTING_BASE="$LOG_DIR/shared-testing/"
 REPO_URL="https://github.com/fermi-lat/ScienceTools.git" # URL of the repo
 # CONDA_PATH="/opt/anaconda/lib/python3.11/site-packages/conda/shell/"    # Path to your conda installation
 
@@ -11,10 +12,11 @@ REPO_URL="https://github.com/fermi-lat/ScienceTools.git" # URL of the repo
 # source "$CONDA_PATH/etc/profile.d/conda.sh" || echo "Conda path incorrect."
 # /opt/anaconda/lib/python3.12/site-packages/conda/shell/etc/profile.d/conda.sh
 
+# Create the directory if it doesn't exist
 mkdir -p "$TESTING_BASE"
 mkdir -p "$TESTING_BASE"/test_results
+# echo "Starting bash script execution" >> "$/bash_script.log"
 cd "$TESTING_BASE"
-
 
 # wget https://fermi.gsfc.nasa.gov/ssc/data/analysis/scitools/data/SummerSchool/Likelihood_rcw103.tgz
 # wget https://fermi.gsfc.nasa.gov/ssc/data/analysis/scitools/data/SummerSchool/Likelihood_rxj1713.tgz

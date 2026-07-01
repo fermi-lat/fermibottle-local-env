@@ -52,9 +52,8 @@ jobs:
         # --frozen 
         # -e fermi
         # pixi run --manifest-path environments/pixi.toml fermi-env --run-post-link-scripts
-        pixi run --manifest-path environments/pixi.toml -e fermi bash  scripts/test_fermi_pixi_internal.sh
-        ls -l "${HOME}/shared-testing/"
-        ls -l ${{ github.workspace }}
+        pixi run --manifest-path environments/pixi.toml -e fermi bash  scripts/test_fermi_pixi_internal.sh ${{ github.workspace }}
+        ls -l "${{ github.workspace }}/shared-testing/"
       #pixi run test
 
     # Method B: Use Pixi's custom shell wrapper for multiple inline commands
@@ -73,7 +72,7 @@ jobs:
       with:
         check_name: "Test Results: Conda Baseline ${{ matrix.runner }}"
         files: |
-           $HOME/test_results/*.xml
+           ${{ github.workspace }}/shared-testing/test_results/*.xml
 
     - name: Publish Test Results OSX
       uses: EnricoMi/publish-unit-test-result-action/macos@v2
@@ -81,4 +80,4 @@ jobs:
       with:
         check_name: "Test Results: Conda Baseline ${{ matrix.runner }}"
         files: |
-           $HOME/test_results/*.xml
+           ${{ github.workspace }}/shared-testing/test_results/*.xml
