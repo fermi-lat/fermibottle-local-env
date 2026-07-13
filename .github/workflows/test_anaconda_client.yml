@@ -12,7 +12,7 @@ jobs:
         id: setup-anaconda-cli
         with:
           version: latest
-          tools: pixi, anaconda-client
+          # tools: pixi, anaconda-client
 
       - name: Show installed version
         run: |
