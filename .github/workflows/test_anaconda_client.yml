@@ -18,6 +18,6 @@ jobs:
         run: |
           echo "Installed version: ${{ steps.setup-anaconda-cli.outputs.version }}"
           ana --version
-          ana bootstrap
+          # ana bootstrap
           anaconda whoami
-          anaconda show fermi/fermitools
+          # anaconda show fermi/fermitools
