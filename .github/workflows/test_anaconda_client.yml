@@ -20,11 +20,11 @@ jobs:
           ana --version
           export PATH="$HOME/.local/bin:$PATH"
           ana login 
-          ana mcp setup
-          anaconda mcp terms accept
-          ana mcp discover
+          # ana mcp setup
+          # anaconda mcp terms accept
+          # ana mcp discover
           # ana mcp get-metadata --package <package-name>
           # ana bootstrap
-          ana whoami
-          # anaconda whoami
+          # ana whoami
+          anaconda whoami
           # anaconda show fermi/fermitools
