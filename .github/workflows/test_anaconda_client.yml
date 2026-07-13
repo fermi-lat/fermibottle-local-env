@@ -1,4 +1,4 @@
-name: CI
+name: CI conda delete
 on: 
   workflow_dispatch:
 
@@ -8,11 +8,11 @@ jobs:
     steps:
       - uses: actions/checkout@v6
 
-      - uses: anaconda/actions/setup-anaconda-cli@v0
+      - uses: anaconda/actions/setup-anaconda-cli@main
         id: setup-anaconda-cli
         with:
           version: latest
-          tools: pixi
+          tools: pixi, anaconda-client
 
       - name: Show installed version
         run: |
