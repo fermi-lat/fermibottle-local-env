@@ -18,8 +18,10 @@ jobs:
         run: |
           echo "Installed version: ${{ steps.setup-anaconda-cli.outputs.version }}"
           ana --version
-          ana login
+          export PATH="$HOME/.local/bin:$PATH"
+          ana login 
           ana mcp setup
+          anaconda mcp terms accept
           ana mcp discover
           # ana mcp get-metadata --package <package-name>
           # ana bootstrap
