@@ -19,7 +19,10 @@ jobs:
           echo "Installed version: ${{ steps.setup-anaconda-cli.outputs.version }}"
           ana --version
           ana login
+          ana mcp setup
+          ana mcp discover
+          # ana mcp get-metadata --package <package-name>
           # ana bootstrap
           ana whoami
-          anaconda whoami
+          # anaconda whoami
           # anaconda show fermi/fermitools
