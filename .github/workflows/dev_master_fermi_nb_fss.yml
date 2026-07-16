@@ -58,6 +58,7 @@ jobs:
       run: |
         echo "Run tests testing-jupyter"
         echo "TESTING BRANCH  ${{ github.ref_name }}"
+        pip install git+https://github.com/fermiPy/fermipy.git
         mkdir -p "${{ github.workspace }}/shared-testing/"
         cd "${{ github.workspace }}/shared-testing/"
         # git clone "https://github.com/fermi-lat/AnalysisThreads.git"
