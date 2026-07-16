@@ -1,0 +1,93 @@
+name: Testing Dev master Fermi Summer School notebooks.
+on:
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'
+        required: true
+        default: 'warning'
+
+jobs:
+  conda-ci:
+    runs-on: ${{ matrix.runner }}
+    name: "Notebook Dev master Fermi Summer School Testing- ${{ matrix.pixi-platform }} "
+    defaults:
+      run:
+        shell: bash -l {0}
+
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - pixi-platform: linux-64
+            runner: ubuntu-24.04
+          - pixi-platform: linux-aarch64
+            runner: ubuntu-24.04-arm
+          # - pixi-platform: osx-64
+          #  runner: macos-15-intel
+          # - pixi-platform: osx-arm64
+          #  runner: macos-15
+
+    steps:
+    # 1. Check out the source code
+    - name: Checkout repository
+      uses: actions/checkout@v6
+
+    - name: Checkout repo
+      uses: actions/checkout@v6
+      with:
+         ref: ${{github.ref_name}} #reset_checkout_fixes checkout_fixes master
+
+    - name: Conda environment creation and activation
+      uses: conda-incubator/setup-miniconda@v3
+      with:
+        conda-remove-defaults: true
+        python-version: 3.12.*
+        activate-environment: testing-jupyter
+        environment-file: environments/fermitools-testing-jupyter-nbs.yml
+        auto-update-conda: false
+        auto-activate-base: false
+        show-channel-urls: true
+
+    - name: Run notebooks as tests with nbmake
+      id: run_jupyter_notebooks
+      continue-on-error: ${{ fromJSON(vars.CONTINUE_ON_ERROR || 'false') }}  # Default is to fail at first error
+      # Execute nbmake with pytest.
+      # The --nbmake flag tells pytest to look for notebooks.
+      # You can specify a directory like `notebooks/` or a pattern.
+      run: |
+        echo "Run tests testing-jupyter"
+        echo "TESTING BRANCH  ${{ github.ref_name }}"
+        mkdir -p "${{ github.workspace }}/shared-testing/"
+        cd "${{ github.workspace }}/shared-testing/"
+        # git clone "https://github.com/fermi-lat/AnalysisThreads.git"
+        git clone "https://github.com/FermiSummerSchool/fermi-summer-school.git"
+        mkdir -p test_results
+        cd fermi-summer-school
+        pytest -n auto --nbmake --nbmake-timeout=3000 --junitxml=../test_results/data_quicklook_result.xml -vv Data_Exploration/*.ipynb
+        pytest -n auto --nbmake --nbmake-timeout=3000 --junitxml=../test_results/find_source_results.xml -vv Advanced_Topics/FindSource/*.ipynb
+        pytest -n auto --nbmake --nbmake-timeout=3000 --junitxml=../test_results/fss_like_adv_fermipy_result.xml -vv Likelihood_Advanced/Likelihood\ With\ fermiPy.ipynb
+        pytest -n auto --nbmake --nbmake-timeout=3000 --junitxml=../test_results/fss_like_adv_curvature_result.xml -vv Likelihood_Advanced/Curvature\ Test.ipynb
+        pytest -n auto --nbmake --nbmake-timeout=3000 --junitxml=../test_results/fss_like_adv_lightcurve_result.xml -vv Likelihood_Advanced/Lightcurve.ipynb
+        pytest -n auto --nbmake --nbmake-timeout=3000 --junitxml=../test_results/fss_like_adv_sed_result.xml -vv Likelihood_Advanced/SED\ Stuff.ipynb
+
+        # --ignore=path/to/ignored_dir -n auto -vv
+        # pytest --nbmake --nbmake-timeout=10000  --junitxml=../../test_results/most_jupyter_results.xml  **/*.ipynb
+        # pytest --junitxml=../../test_results/most_jupyter_results.xml --nbmake --nbmake-timeout=10000 -n auto -vv  '*/*.ipynb'
+
+    # The layout for this reporting action works. Not sure if there is something better, but it does a good job for us.
+    - name: Publish Test Results Linux
+      uses: EnricoMi/publish-unit-test-result-action/linux@v2
+      if: runner.os == 'Linux'
+      with:
+        check_name: "Test Results: Conda Baseline ${{ matrix.runner }}"
+        files: |
+           ${{ github.workspace }}/shared-testing/test_results/*.xml
+
+    - name: Publish Test Results OSX
+      uses: EnricoMi/publish-unit-test-result-action/macos@v2
+      if: runner.os == 'macOS'
+      with:
+        check_name: "Test Results: Conda Baseline ${{ matrix.runner }}"
+        files: |
+           ${{ github.workspace }}/shared-testing/test_results/*.xml
