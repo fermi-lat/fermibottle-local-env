@@ -47,7 +47,7 @@ jobs:
         activate-environment: testing-jupyter
         environment-file: environments/fermitools-testing-jupyter-nbs.yml
         # environments/fermitools-jupyter-nb.yml
-        auto-update-conda: true
+        auto-update-conda: false
         auto-activate-base: false
         show-channel-urls: true
 
