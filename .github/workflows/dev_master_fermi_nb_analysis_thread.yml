@@ -73,7 +73,7 @@ jobs:
         # These pass individually : (4,6, 7,10), but fail when ran in parallel with "-n=auto"
         # --ignore=path/to/ignored_dir -n auto -vv
         # pytest --nbmake --nbmake-timeout=10000  --junitxml=../../test_results/most_jupyter_results.xml  **/*.ipynb
-        pytest --junitxml=../../test_results/most_jupyter_results.xml --nbmake --nbmake-timeout=10000 -n auto -vv  '*/*.ipynb'
+        pytest --junitxml=../../test_results/most_jupyter_results.xml --nbmake --nbmake-timeout=10000 -n auto -vv  '*.ipynb'
         # pytest  --junitxml=../test_results/jupyter_results.xml --nbmake --nbmake-timeout=5000 -v --full-trace SourceAnalysis/4.SummedPythonLikelihood/summed_tutorial.ipynb SourceAnalysis/6.ExtendedSourceAnalysis/extended.ipynb::extended.ipynb SourceAnalysis/7.LATAperturePhotometry/aperture_photometry.ipynb  SourceAnalysis/10.EnergyDispersion/binnededisp_tutorial.ipynb
 
     # The layout for this reporting action works. Not sure if there is something better, but it does a good job for us.
