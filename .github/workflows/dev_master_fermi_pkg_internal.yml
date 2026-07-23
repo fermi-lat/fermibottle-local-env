@@ -58,7 +58,7 @@ jobs:
       run: |
         echo "Run tests testing-jupyter"
         echo "TESTING BRANCH  ${{ github.ref_name }}"
-       
+        conda install tqdm       
         pip install git+https://github.com/threeML/astromodels.git@dev
         pip install git+https://github.com/fermiPy/fermipy.git
         pip install git+https://github.com/threeML/threeML.git@dev
@@ -66,9 +66,8 @@ jobs:
         mkdir -p "${{ github.workspace }}/shared-testing/"
         cd "${{ github.workspace }}/shared-testing/"
 
-
-        git clone "https://github.com/fermi-lat/AnalysisThreads.git"
-        git clone "https://github.com/FermiSummerSchool/fermi-summer-school.git"
+        # git clone "https://github.com/fermi-lat/AnalysisThreads.git"
+        # git clone "https://github.com/FermiSummerSchool/fermi-summer-school.git"
         mkdir -p test_results
         git clone https://github.com/fermi-lat/ScienceTools.git
 
