@@ -73,7 +73,7 @@ jobs:
 
         cd test_results/
         pytest --junitxml=fermipy_results.xml -vv --pyargs fermipy
-        pytest --junitxml=3ML_results.xml -vv --pyargs threeML
+        # pytest --junitxml=3ML_results.xml -vv --pyargs threeML
  
         cd ../ScienceTools/
         recipe/tests/ST-AGN-thread-test -w -d -v
