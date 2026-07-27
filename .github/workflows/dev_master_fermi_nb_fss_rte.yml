@@ -1,4 +1,4 @@
-name: Testing Dev master Fermi Package internal tests
+name: Testing Dev master Fermi Summer School notebooks.
 on:
   workflow_dispatch:
     inputs:
@@ -10,7 +10,7 @@ on:
 jobs:
   conda-ci:
     runs-on: ${{ matrix.runner }}
-    name: "Notebook Dev master Fermi Internal pkg Testing- ${{ matrix.pixi-platform }} "
+    name: "Notebook Dev master Fermi Summer School Testing- ${{ matrix.pixi-platform }} "
     defaults:
       run:
         shell: bash -l {0}
@@ -33,26 +33,29 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v6
 
-    # - name: Checkout repo
-    #  uses: actions/checkout@v6
-    #  with:
-    #     ref: ${{github.ref_name}} #reset_checkout_fixes checkout_fixes master
+    - name: Checkout repo
+      uses: actions/checkout@v6
+      with:
+         ref: ${{github.ref_name}} #reset_checkout_fixes checkout_fixes master
 
     - name: Conda environment creation and activation
-      uses: conda-incubator/setup-miniconda@v4
+      uses: conda-incubator/setup-miniconda@v3
       with:
         conda-remove-defaults: true
         python-version: 3.12.*
         activate-environment: testing-jupyter
         environment-file: environments/fermitools-testing-jupyter-nbs.yml
         auto-update-conda: false
-        auto-activate: false
+        auto-activate-base: false
         show-channel-urls: true
         condarc-file: |
-          remote_max_retries: 5
-          remote_backoff_factor: 2
-          remote_connect_timeout_secs: 20.0
-          remote_read_timeout_secs: 120.0
+         remote_max_retries: 5
+         remote_backoff_factor: 2
+         remote_connect_timeout_secs: 20.0
+         remote_read_timeout_secs: 120.0
+
+
+
 
     - name: Run notebooks as tests with nbmake
       id: run_jupyter_notebooks
@@ -63,26 +66,24 @@ jobs:
       run: |
         echo "Run tests testing-jupyter"
         echo "TESTING BRANCH  ${{ github.ref_name }}"
-        conda install tqdm       
-        pip install git+https://github.com/threeML/astromodels.git@dev
         pip install git+https://github.com/fermiPy/fermipy.git
-        pip install git+https://github.com/threeML/threeML.git@dev
-
         mkdir -p "${{ github.workspace }}/shared-testing/"
         cd "${{ github.workspace }}/shared-testing/"
-
-        # git clone "https://github.com/fermi-lat/AnalysisThreads.git"
-        # git clone "https://github.com/FermiSummerSchool/fermi-summer-school.git"
+        git clone "https://github.com/FermiSummerSchool/fermi-summer-school.git"
         mkdir -p test_results
-        git clone https://github.com/fermi-lat/ScienceTools.git
 
-        cd test_results/
-        pytest --junitxml=fermipy_results.xml -vv --pyargs fermipy
-        # pytest --junitxml=3ML_results.xml -vv --pyargs threeML
- 
-        cd ../ScienceTools/
-        recipe/tests/ST-AGN-thread-test -w -d -v
-        recipe/tests/ST-unit-test -w -d -v        
+        # Passed 07/17/26 3 hours to run:
+        wget https://fermi.gsfc.nasa.gov/ssc/data/analysis/scitools/data/SummerSchool/Likelihood_rxj1713.tgz
+        tar -xvf Likelihood_rxj1713.tgz
+        rm -f Likelihood_rxj1713.tgz
+        cd Likelihood_rxj1713/
+        pytest --nbmake -n auto --nbmake-timeout=6000 --junitxml=../test_results/ss_real_exe_rxj1713_result.xml -vv Realtime_execution_RXJ1713.ipynb
+        cd ../
+        wget https://fermi.gsfc.nasa.gov/ssc/data/analysis/scitools/data/SummerSchool/Likelihood_rcw103.tgz
+        tar -xvf Likelihood_rcw103.tgz
+        rm -f Likelihood_rcw103.tgz
+        cd Likelihood_rcw103/
+        pytest --nbmake -n auto --nbmake-timeout=6000 --junitxml=../test_results/ss_real_exe_rcw103_result.xml -vv Realtime_execution_RCW103.ipynb
 
     # The layout for this reporting action works. Not sure if there is something better, but it does a good job for us.
     - name: Publish Test Results Linux
