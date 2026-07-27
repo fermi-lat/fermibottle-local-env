@@ -1,4 +1,4 @@
-name: Testing Dev master Fermi Summer School notebooks.
+name: Testing Dev master Fermi RTE Summer School notebooks.
 on:
   workflow_dispatch:
     inputs:
@@ -10,7 +10,7 @@ on:
 jobs:
   conda-ci:
     runs-on: ${{ matrix.runner }}
-    name: "Notebook Dev master Fermi Summer School Testing- ${{ matrix.pixi-platform }} "
+    name: "Notebook Dev master Fermi RTE Summer School Testing- ${{ matrix.pixi-platform }} "
     defaults:
       run:
         shell: bash -l {0}
@@ -19,14 +19,14 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          # - pixi-platform: linux-64
-          #  runner: ubuntu-24.04
+          - pixi-platform: linux-64
+            runner: ubuntu-24.04
           - pixi-platform: linux-aarch64
             runner: ubuntu-24.04-arm
-          # - pixi-platform: osx-64
-          #  runner: macos-15-intel
-          #- pixi-platform: osx-arm64
-          #  runner: macos-15
+          - pixi-platform: osx-64
+            runner: macos-15-intel
+          - pixi-platform: osx-arm64
+            runner: macos-15
 
     steps:
     # 1. Check out the source code
