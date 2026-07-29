@@ -75,6 +75,11 @@ jobs:
         # pytest -n auto --nbmake --nbmake-timeout=3000 --junitxml=../test_results/find_source_results.xml -vv Advanced_Topics/FindSource/*.ipynb
 
         # fails with 95 
+        # Need for Likelihood_Advanced tests to run:
+        wget https://fermi.gsfc.nasa.gov/science/mtgs/summerschool/2021/fermipyTutorialData.tgz
+        tar xf fermipyTutorialData.tgz
+        mv data ./Likelihood_Advanced
+ 
         pytest -n auto --nbmake --nbmake-timeout=3000 --junitxml=../test_results/fss_like_adv_fermipy_result.xml -vv Likelihood_Advanced/Likelihood_With_fermiPy.ipynb
         pytest -n auto --nbmake --nbmake-timeout=3000 --junitxml=../test_results/fss_like_adv_curvature_result.xml -vv Likelihood_Advanced/Curvature\ Test.ipynb
         pytest -n auto --nbmake --nbmake-timeout=3000 --junitxml=../test_results/fss_like_adv_lightcurve_result.xml -vv Likelihood_Advanced/Lightcurve.ipynb
