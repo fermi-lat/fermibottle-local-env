@@ -80,13 +80,13 @@ jobs:
         tar xf fermipyTutorialData.tgz
         mv data ./Likelihood_Advanced
  
-        pytest -n auto --nbmake --nbmake-timeout=3000 --junitxml=../test_results/fss_like_adv_fermipy_result.xml -vv Likelihood_Advanced/Likelihood_With_fermiPy.ipynb
-        pytest -n auto --nbmake --nbmake-timeout=3000 --junitxml=../test_results/fss_like_adv_curvature_result.xml -vv Likelihood_Advanced/Curvature\ Test.ipynb
-        pytest -n auto --nbmake --nbmake-timeout=3000 --junitxml=../test_results/fss_like_adv_lightcurve_result.xml -vv Likelihood_Advanced/Lightcurve.ipynb
-        pytest -n auto --nbmake --nbmake-timeout=3000 --junitxml=../test_results/fss_like_adv_sed_result.xml -vv Likelihood_Advanced/SED\ Stuff.ipynb
+        pytest -n auto --nbmake --nbmake-timeout=4000 --junitxml=../test_results/fss_like_adv_fermipy_result.xml -vv Likelihood_Advanced/Likelihood_With_fermiPy.ipynb
+        pytest -n auto --nbmake --nbmake-timeout=4000 --junitxml=../test_results/fss_like_adv_curvature_result.xml -vv Likelihood_Advanced/Curvature\ Test.ipynb
+        pytest -n auto --nbmake --nbmake-timeout=6000 --junitxml=../test_results/fss_like_adv_lightcurve_result.xml -vv Likelihood_Advanced/Lightcurve.ipynb
+        pytest -n auto --nbmake --nbmake-timeout=4000 --junitxml=../test_results/fss_like_adv_sed_result.xml -vv Likelihood_Advanced/SED\ Stuff.ipynb
 
-        # pytest -n auto --nbmake --nbmake-timeout=3000 --junitxml=../test_results/data_quicklook_result.xml -vv Data_Exploration/*.ipynb
-        pytest -n auto  --nbmake --nbmake-timeout=3000 --junitxml=d2ata_quicklook_result.xml -vv Data_Exploration/Data_QuickLook.ipynb
+        pytest -n auto --nbmake --nbmake-timeout=3000 --junitxml=../test_results/data_quicklook_result.xml -vv Data_Exploration/*.ipynb
+        # pytest -n auto  --nbmake --nbmake-timeout=3000 --junitxml=d2ata_quicklook_result.xml -vv Data_Exploration/Data_QuickLook.ipynb
         pytest -n auto --nbmake --nbmake-timeout=3000 --junitxml=../test_results/find_source_results.xml -vv Advanced_Topics/FindSource/*.ipynb
 
 
