@@ -1,7 +1,7 @@
 name: fermitools-testing
 channels:
   - conda-forge
-  - fermi/label/rc
+  - fermi/label/main
 dependencies:
   - python=3.12
   - pmw
