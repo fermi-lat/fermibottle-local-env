@@ -1,4 +1,4 @@
-name: Testing Dev master Fermi Package internal tests
+name: Testing Master Fermi Package internal tests
 on:
   workflow_dispatch:
     inputs:
@@ -10,7 +10,7 @@ on:
 jobs:
   conda-ci:
     runs-on: ${{ matrix.runner }}
-    name: "Notebook Dev master Fermi Internal pkg Testing- ${{ matrix.pixi-platform }} "
+    name: "Notebook Master Fermi Internal pkg Testing- ${{ matrix.pixi-platform }} "
     defaults:
       run:
         shell: bash -l {0}

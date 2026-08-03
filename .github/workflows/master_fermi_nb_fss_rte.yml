@@ -1,4 +1,4 @@
-name: Testing Dev master Fermi RTE Summer School notebooks.
+name: Testing Master Fermi RTE Summer School notebooks.
 on:
   workflow_dispatch:
     inputs:
@@ -10,7 +10,7 @@ on:
 jobs:
   conda-ci:
     runs-on: ${{ matrix.runner }}
-    name: "Notebook Dev master Fermi RTE Summer School Testing- ${{ matrix.pixi-platform }} "
+    name: "Notebook Master Fermi RTE Summer School Testing- ${{ matrix.pixi-platform }} "
     defaults:
       run:
         shell: bash -l {0}
