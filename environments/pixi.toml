@@ -1,6 +1,6 @@
 [workspace]
 authors = ["Malte Busmann <m.busmann@physik.lmu.de>"]
-channels = ["conda-forge", "fermi/label/dev", "fermi", "threeml/label/dev" ]
+channels = ["conda-forge", "fermi/label/main", "fermi", "threeml/label/dev" ]
 name = "Fermi_Summer_School_2026"
 platforms = ["linux-64", "osx-arm64",  "osx-64", "linux-aarch64"]
 version = "0.1.0"
@@ -27,22 +27,19 @@ depends-on = [
 [dependencies]
 git = "*"
 pipx = "*"
-# regions = "<0.12"
-regions = "*"
-python = "3.11.*"
-jupyter = ">=1.1.1,<2"
-jupyterlab = ">=4.5.7,<5"
-astropy = ">=7.2.0"
-# junit-xml = ">=1.0" # 1.0
-# pytest = ">=8.3.4"
+regions = "<0.12" # FermiPy needs .11, but we do work with .12
+python = "3.12.*"
+jupyter = "*"
+jupyterlab = "*"
+astropy = "<8.0.0"
 pytest = "*"
 junit-xml = "*"
-ipyparallel = ">=9.2.0,<10"
-taplo = ">=0.9.3"
-ipykernel = ">=7.3.0"
-nbmake = ">=1.5.0" # 1.5.5
-nb_conda_kernels = ">=2.5.1"
-numpy = "==1.26.4"
+ipyparallel = "*"
+taplo = "*"
+ipykernel = "*"
+nbmake = "*" # 1.5.5
+nb_conda_kernels = "*"
+numpy = ">2.0"
 xpa = "*"
 xorg-libxt = "*"
 xorg-libx11 = "*"          # Add this
@@ -51,26 +48,23 @@ pgplot = "*"
 healpy = "*"
 libpng = "*"
 matplotlib = "*"
-scipy = "*"
+scipy = "<1.18"
 pytest-xdist = "*"
 pmw = "*"
 seaborn = "*"
-# jupyter \
-# astropy-iers-data \
-#  matplotlib \
-# conda-forge::nbmake \
+
 
 # [pypi-dependencies]
 #pyds9 = ">=1.8.1, <2"
+astromodels = { git = "https://github.com", branch = "dev" }
+fermipy
+threeml = { git = "https://github.", branch = "dev" }
 
 [feature.fermi.dependencies]
-# astropy = ">=7.2.0"
-# numpy = "==1.26.4"
-fermitools = "==2.5.1"
+fermitools = "==2.5.3"
 gammapy = ">=2.0"
-fermipy = ">=1.4.2"
-astromodels = ">=2.5.0" 
-threeml = ">=2.5.0" 
+fermipy = ">=1.4.3"
+
 
 # [feature.fermigbm.dependencies]
 # basemap = ">=2.0.0,<3"
