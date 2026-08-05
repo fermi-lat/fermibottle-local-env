@@ -69,6 +69,7 @@ jobs:
         # git clone "https://github.com/FermiSummerSchool/fermi-summer-school.git"
         mkdir -p test_results
         git clone https://github.com/fermi-lat/ScienceTools.git
+        git clone https://github.com/fermiPy/fermipy-extra.git
 
         cd test_results/
         pytest --junitxml=fermipy_results.xml -vv --pyargs fermipy
@@ -77,6 +78,9 @@ jobs:
         cd ../ScienceTools/
         recipe/tests/ST-AGN-thread-test -w -d -v
         recipe/tests/ST-unit-test -w -d -v        
+
+        cd ../fermipy-extra/notebooks/
+        pytest  -n auto --nbmake --nbmake-timeout=5000  --ignore=./index.ipynb  --ignore=./dSphs.ipynb --junitxml=../../test_results/fermipy_extra.xml 
 
     # The layout for this reporting action works. Not sure if there is something better, but it does a good job for us.
     - name: Publish Test Results Linux
