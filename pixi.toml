@@ -1,0 +1,72 @@
+[workspace]
+authors = ["James Amrhein <james.s.amrhein@nasa.gov>"]
+channels = ["conda-forge", "fermi/label/dev", "threeml/label/dev", "https://conda.anaconda.org/fermi"]
+name = "Fermi_Summer_School_2026"
+# "linux-64", "linux-aarch64"
+platforms = ["linux-64", "osx-arm64",  "osx-64"]
+# platforms = ["osx-arm64"]
+version = "0.1.0"
+preview = ["pixi-build"]
+
+[tasks]
+notebook = "jupyter notebook --ip 00.00.00.00 --no-browser"
+fshell = "pixi shell"
+
+[tasks.notebook-fermi]
+depends-on = [
+  { task = "notebook", environment = "fermi" },
+]
+
+[tasks.fermi-env]
+depends-on = [
+  { task = "fshell", environment = "fermi" },
+]
+
+[dependencies]
+setuptools = "*"
+wheel = "*"
+git = "*"
+pipx = "*"
+taplo = "*"
+xpa = "*"
+xorg-libxt = "*"
+xorg-libx11 = "*"          # Add this
+xorg-libxext = "*"         # Add this
+python = "3.12.*"
+pmw = "*"
+gammapy = ">=2.0"
+healpy = "*"
+fermitools-data = { channel = "fermi" }
+fermitools-test-scripts-data = { channel = "fermi" }
+numpy = ">2.0"
+astropy = "*"
+scipy = "<1.18"
+regions = "<0.12"
+ipykernel = "*"
+pytest = "*"
+pytest-cov = "*"
+junit-xml = "*"
+nbmake = "*"
+nb_conda_kernels = "*"
+jupyterlab = "*"
+pytest-xdist = "*"
+# astromodels = { git = "https://github.com/threeML/astromodels.git", branch = "dev" }
+# threeml = { git = "https://github.com/threeML/threeML.git", branch = "dev" }
+
+[pypi-options]
+no-build = true
+prerelease-mode = "allow"
+
+[pypi-dependencies]
+#pyds9 = ">=1.8.1, <2"
+fermipy = "*"
+astromodels = "*"
+threeml = "*"
+# astromodels = { git = "https://github.com/threeML/astromodels.git", branch = "dev" }
+# threeml = { git = "https://github.com/threeML/threeML.git", branch = "dev" }
+
+[feature.fermi.dependencies]
+fermitools = ">=2.5.3"
+
+[environments.fermi]
+features = ["default", "fermi"]

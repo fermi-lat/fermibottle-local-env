@@ -42,17 +42,18 @@ jobs:
         cache: true 
         # pixi-version: v0.10.0
         environments: fermi # or your specific environment name
-        # v0.70.2
-        manifest-path: environments/pixi.toml
+        # v0.70.2 environments/pixi.toml
+        manifest-path: pixi.toml
 
-    # Method A: Execute a named task from your pixi.toml
+    # Method A: Execute a named task from your pixi.toml environments/pixi.toml
     - name: Run Pixi Task
       run: |
-        pixi install --manifest-path environments/pixi.toml --run-post-link-scripts
+        pixi install --manifest-path ./pixi.toml --run-post-link-scripts
         # --frozen 
         # -e fermi
         # pixi run --manifest-path environments/pixi.toml fermi-env --run-post-link-scripts
-        pixi run --manifest-path environments/pixi.toml -e fermi bash  scripts/test_fermi_pixi_internal.sh ${{ github.workspace }}
+        # environments/pixi.toml
+        pixi run --manifest-path ./pixi.toml -e fermi bash  scripts/test_fermi_pixi_internal.sh ${{ github.workspace }}
         ls -l "${{ github.workspace }}/shared-testing/"
       #pixi run test
 
