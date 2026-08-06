@@ -20,14 +20,16 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - pixi-platform: linux-64
-            runner: ubuntu-24.04
           - pixi-platform: linux-aarch64
             runner: ubuntu-24.04-arm
-          #- pixi-platform: osx-64
-          #  runner: macos-15-intel
           - pixi-platform: osx-arm64
             runner: macos-15
+          #- pixi-platform: osx-64
+          #  runner: macos-15-intel
+          # - pixi-platform: linux-64
+          #  runner: ubuntu-24.04
+
+
 
     steps:
     # 1. Check out the source code
@@ -48,12 +50,12 @@ jobs:
     # Method A: Execute a named task from your pixi.toml environments/pixi.toml
     - name: Run Pixi Task
       run: |
-        pixi install --manifest-path ./pixi.toml --run-post-link-scripts
+        pixi install --manifest-path pixi.toml --run-post-link-scripts
         # --frozen 
         # -e fermi
         # pixi run --manifest-path environments/pixi.toml fermi-env --run-post-link-scripts
         # environments/pixi.toml
-        pixi run --manifest-path ./pixi.toml -e fermi bash  scripts/test_fermi_pixi_internal.sh ${{ github.workspace }}
+        pixi run --manifest-path pixi.toml -e fermi bash  scripts/test_fermi_pixi_internal.sh ${{ github.workspace }}
         ls -l "${{ github.workspace }}/shared-testing/"
       #pixi run test
 
