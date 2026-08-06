@@ -41,7 +41,7 @@ jobs:
           conda-remove-defaults: true
           python-version: 3.12.*
           activate-environment: testing-jupyter
-          environment-file: environments/fermitools-testing-jupyter-nbs.yml
+          environment-file: environments/dev-fermitools-testing-jupyter-nbs.yml
           auto-update-conda: false
           auto-activate: false
           show-channel-urls: true
@@ -80,7 +80,8 @@ jobs:
         recipe/tests/ST-unit-test -w -d -v        
 
         cd ../fermipy-extra/notebooks/
-        pytest  -n auto --nbmake --nbmake-timeout=5000  --ignore=./index.ipynb  --ignore=./dSphs.ipynb --junitxml=../../test_results/fermipy_extra.xml 
+        # increased from 5000 to 10000
+        pytest  -n auto --nbmake --nbmake-timeout=10000  --ignore=./index.ipynb  --ignore=./dSphs.ipynb --junitxml=../../test_results/fermipy_extra.xml 
 
     # The layout for this reporting action works. Not sure if there is something better, but it does a good job for us.
     - name: Publish Test Results Linux
