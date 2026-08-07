@@ -39,7 +39,7 @@ healpy = "*"
 fermitools-data = { channel = "fermi" }
 fermitools-test-scripts-data = { channel = "fermi" }
 numpy = ">2.0"
-astropy = "*"
+astropy = "<8.0"
 scipy = "<1.18"
 regions = "<0.12"
 ipykernel = "*"
@@ -54,16 +54,16 @@ pytest-xdist = "*"
 # threeml = { git = "https://github.com/threeML/threeML.git", branch = "dev" }
 
 [pypi-options]
-no-build = true
 prerelease-mode = "allow"
+no-build = false
 
 [pypi-dependencies]
 #pyds9 = ">=1.8.1, <2"
-fermipy = "*"
-astromodels = "*"
-threeml = "*"
-# astromodels = { git = "https://github.com/threeML/astromodels.git", branch = "dev" }
-# threeml = { git = "https://github.com/threeML/threeML.git", branch = "dev" }
+fermipy = ">=1.4.3"
+# astromodels = ">=2.6.0"
+# threeml = "*"
+astromodels = { git = "https://github.com/threeML/astromodels.git", branch = "dev" }
+threeml = { git = "https://github.com/threeML/threeML.git", branch = "dev" }
 
 [feature.fermi.dependencies]
 fermitools = ">=2.5.3"

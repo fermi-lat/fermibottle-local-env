@@ -18,7 +18,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/_openmp_mutex-4.5-20_gnu.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/aiohttp-3.14.3-py312he7e3343_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/argon2-cffi-bindings-25.1.0-py312hcd1a082_2.conda
-      - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/astropy-base-8.0.1-py312h5fde510_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/astropy-base-7.2.0-py312h5fde510_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/aws-c-auth-0.10.4-h03961ac_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/aws-c-cal-0.9.14-h6c1c863_4.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/aws-c-common-0.14.2-he30d5cf_0.conda
@@ -198,7 +198,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/argcomplete-3.7.1-pyhcf101f3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/argon2-cffi-25.1.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/arrow-1.4.0-pyhcf101f3_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/noarch/astropy-8.0.1-pyhd8ed1ab_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/astropy-7.2.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/astropy-iers-data-0.2026.8.3.0.53.6-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/asttokens-3.0.2-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/async-lru-2.3.0-pyhcf101f3_0.conda
@@ -354,6 +354,8 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/zipp-4.1.0-pyhcf101f3_0.conda
       - conda: https://conda.anaconda.org/fermi/noarch/fermitools-data-0.19-0.tar.bz2
       - conda: https://conda.anaconda.org/fermi/noarch/fermitools-test-scripts-data-0.5-0.conda
+      - pypi: git+https://github.com/threeML/astromodels.git?branch=dev#04f9e7f4df941b4a964761a2ea64bc8db78f2a3c
+      - pypi: git+https://github.com/threeML/threeML.git?branch=dev#6b53ddf10950521c17ff161eea685a09d629c792
       - pypi: https://files.pythonhosted.org/packages/02/36/ecc85bc96c273dc8a11273ed4782272975e6338d4a3e9228621175edf0e3/jaraco_functools-4.6.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/05/7f/798705f5296a58ca505d600456748d1be48078eac8a7050d8a98bc9edb89/decorator-5.3.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/07/18/5dd2289514303640c42b612536b9ebf396e99f6412b0b1f5dc1e1d08abb4/omegaconf-2.4.0.dev14-py3-none-any.whl
@@ -367,7 +369,6 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/32/fb/d08543fc15c405358504b025f56db2a89da3655bdc4b17abbb2ed66fd65e/numba-0.67.0rc1-cp312-cp312-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl
       - pypi: https://files.pythonhosted.org/packages/41/13/ed5efda74ace9a7e2e933476b85bba6d00f2ebf6b833ef59a796ec9af88c/numexpr-2.14.2-cp312-cp312-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl
       - pypi: https://files.pythonhosted.org/packages/43/81/808430a3cfe0ba5fb539b04de14f5493a4b841fdf3208a8d75e89d249533/llvmlite-0.49.0rc1-cp312-cp312-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl
-      - pypi: https://files.pythonhosted.org/packages/4c/f1/d0778ee0b47e934a1023e47fbf5cb26e871982a30fbfb6a7a3e38a3a8c2b/fermipy-1.2-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/60/60/c7504633e9fe53dc823db5d83dc15651c595cf35d668781832b4d2748272/numdifftools-0.9.42-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/7a/9c/ded2f0569b2f393f149e32126c4055400c2f692990b467bd1136ba9160af/speclite-1.0.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/7b/91/984aca2ec129e2757d1e4e3c81c3fcda9d0f85b74670a094cc443d9ee949/joblib-1.5.3-py3-none-any.whl
@@ -377,20 +378,18 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/82/3b/64d4899d73f91ba49a8c18a8ff3f0ea8f1c1d75481760df8c68ef5235bf5/rich-15.0.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/8f/5e/f1e1dd319e35e962a4e00b33150a8868b6329cc1d19fd533436ba5488f09/uncertainties-3.2.3-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/92/dc/5f0bc1b2cf3d829a3bb7510f54992d12d8888674d87a5da80c4d44792a00/astroquery-0.4.12.dev10885-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/b0/79/f0f1ca286b78f6f33c521a36b5cbd5bd697c0d66217d8856f443aeb9dd77/versioneer-0.29-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/b2/a3/e137168c9c44d18eff0376253da9f1e9234d0239e0ee230d2fee6cea8e55/jeepney-0.9.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/b3/38/89ba8ad64ae25be8de66a6d463314cf1eb366222074cfda9ee839c56a4b4/mdurl-0.1.2-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/b3/81/4da04ced5a082363ecfa159c010d200ecbd959ae410c10c0264a38cac0f5/markdown_it_py-4.2.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/b7/46/f5af3402b579fd5e11573ce652019a67074317e18c1935cc0b4ba9b35552/secretstorage-3.5.0-py3-none-any.whl
-      - pypi: https://files.pythonhosted.org/packages/ba/9e/44565fc895f27ed7da778f98b9c7c77343ccb0f33e3e0e5b3511ff2d8eab/interpolation-2.2.7-py3-none-any.whl
-      - pypi: https://files.pythonhosted.org/packages/c0/2c/4d2006c6ef92a05d195d9ab0fc379589bbb97ec8e787306d226a92174d55/astromodels-2.3.0.dev3-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/cb/7e/127c6209613a779e9651f36cf4ab54ba0971b6b4db43495157188a6a33e6/fermipy-1.4.3.tar.gz
       - pypi: https://files.pythonhosted.org/packages/cc/a3/ec228901fca4c996306b17f5c60a4105144df0bbd07b3a4a816f91f37b4a/tables-3.11.1-cp311-abi3-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl
       - pypi: https://files.pythonhosted.org/packages/d6/cb/17a130e548ee1777f2a66e09240c531a9bf79454add7ef1198fe1e41c412/corner-2.3.0-py3-none-any.whl
-      - pypi: https://files.pythonhosted.org/packages/da/71/ae30dadffc90b9006d77af76b393cb9dfbfc9629f339fc1574a1c52e6806/future-1.0.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/e0/a9/023730ba63db1e494a271cb018dcd361bd2c917ba7004c3e49d5daf795a2/py_cpuinfo-9.0.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/e1/3d/0cde0db89ac8dd4e5347322470530298915739f7e9b356b01c1939de8c4f/astropy_healpix-2.0.1-cp310-abi3-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl
       - pypi: https://files.pythonhosted.org/packages/e8/3d/1087453384dbde46a8c7f9356eead2c58be8a7bf156bca40243377c85715/more_itertools-11.1.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/f2/58/bc8954bda5fcda97bd7c19be11b85f91973d67a706ed4a3aec33e7de22db/jaraco_context-6.1.2-py3-none-any.whl
-      - pypi: https://files.pythonhosted.org/packages/f8/69/3abd02a4ba5e4d1cc46d08c8c3431bae9387759f843186550f175ce57621/threeml-2.6.1.dev1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/f9/1c/01bfd571a64e7f270e6bab5e33777debe0edc56759233ce84f27dec92d14/tqdm-4.70.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/f9/ef/2196b9bf88ffa1bde45853c72df021fbd07a8fa91a0f59a22d14a050dc04/emcee-3.1.6-py2.py3-none-any.whl
       osx-arm64:
@@ -405,7 +404,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/argcomplete-3.7.1-pyhcf101f3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/argon2-cffi-25.1.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/arrow-1.4.0-pyhcf101f3_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/noarch/astropy-8.0.1-pyhd8ed1ab_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/astropy-7.2.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/astropy-iers-data-0.2026.8.3.0.53.6-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/asttokens-3.0.2-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/async-lru-2.3.0-pyhcf101f3_0.conda
@@ -562,7 +561,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/_openmp_mutex-4.5-7_kmp_llvm.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/aiohttp-3.14.3-py312h9f8c436_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/argon2-cffi-bindings-25.1.0-py312h4409184_2.conda
-      - conda: https://conda.anaconda.org/conda-forge/osx-arm64/astropy-base-8.0.1-py312hf57c059_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/osx-arm64/astropy-base-7.2.0-py312ha11c99a_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/aws-c-auth-0.10.4-h0f08c97_1.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/aws-c-cal-0.9.14-hb9ed60c_4.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/aws-c-common-0.14.2-h84a0fba_0.conda
@@ -603,7 +602,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/gflags-2.3.1-h784d473_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/git-2.55.0-pl5321h545aa0d_1.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/glog-0.7.1-h6f9ecc1_1.conda
-      - conda: https://conda.anaconda.org/conda-forge/osx-arm64/graphite2-1.3.15-hf6b4638_1.conda
+      - conda: https://conda.anaconda.org/conda-forge/osx-arm64/graphite2-1.3.15-h784d473_1.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/h5py-3.16.0-nompi_py312h585e8c8_102.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/hdf5-2.1.0-nompi_hebe1841_110.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/healpy-1.20.0-py312hc7c58be_0.conda
@@ -729,6 +728,8 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/zstd-1.5.7-hbf9d68e_6.conda
       - conda: https://conda.anaconda.org/fermi/noarch/fermitools-data-0.19-0.tar.bz2
       - conda: https://conda.anaconda.org/fermi/noarch/fermitools-test-scripts-data-0.5-0.conda
+      - pypi: git+https://github.com/threeML/astromodels.git?branch=dev#04f9e7f4df941b4a964761a2ea64bc8db78f2a3c
+      - pypi: git+https://github.com/threeML/threeML.git?branch=dev#6b53ddf10950521c17ff161eea685a09d629c792
       - pypi: https://files.pythonhosted.org/packages/02/36/ecc85bc96c273dc8a11273ed4782272975e6338d4a3e9228621175edf0e3/jaraco_functools-4.6.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/05/7f/798705f5296a58ca505d600456748d1be48078eac8a7050d8a98bc9edb89/decorator-5.3.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/07/18/5dd2289514303640c42b612536b9ebf396e99f6412b0b1f5dc1e1d08abb4/omegaconf-2.4.0.dev14-py3-none-any.whl
@@ -737,7 +738,6 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/30/2c/ebcf7b8ab6bad8667b3884a2d94f006898f75cc3e59f904a207b791529ac/ipyparallel-9.2.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/31/5b/619241afef7ac50cc246a78273c05cae8704c41424415edd40bbf1aa59c6/blosc2-4.10.1-cp312-cp312-macosx_11_0_arm64.whl
       - pypi: https://files.pythonhosted.org/packages/32/d5/f9a850d79b0851d1d4ef6456097579a9005b31fea68726a4ae5f2d82ddd9/threadpoolctl-3.6.0-py3-none-any.whl
-      - pypi: https://files.pythonhosted.org/packages/4c/f1/d0778ee0b47e934a1023e47fbf5cb26e871982a30fbfb6a7a3e38a3a8c2b/fermipy-1.2-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/50/2e/ebdb85a8da151397a2790363676b7ed7c125924fe618e4c6d8befb0cc62c/msgpack-1.2.1-cp312-cp312-macosx_11_0_arm64.whl
       - pypi: https://files.pythonhosted.org/packages/60/60/c7504633e9fe53dc823db5d83dc15651c595cf35d668781832b4d2748272/numdifftools-0.9.42-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/78/74/6568c8d3aabf9982ab89fe3e378afbd7aad4894bde4570991a3246169ef4/tables-3.11.1-cp311-abi3-macosx_11_0_arm64.whl
@@ -749,12 +749,11 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/82/3b/64d4899d73f91ba49a8c18a8ff3f0ea8f1c1d75481760df8c68ef5235bf5/rich-15.0.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/8f/5e/f1e1dd319e35e962a4e00b33150a8868b6329cc1d19fd533436ba5488f09/uncertainties-3.2.3-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/92/dc/5f0bc1b2cf3d829a3bb7510f54992d12d8888674d87a5da80c4d44792a00/astroquery-0.4.12.dev10885-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/b0/79/f0f1ca286b78f6f33c521a36b5cbd5bd697c0d66217d8856f443aeb9dd77/versioneer-0.29-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/b3/38/89ba8ad64ae25be8de66a6d463314cf1eb366222074cfda9ee839c56a4b4/mdurl-0.1.2-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/b3/81/4da04ced5a082363ecfa159c010d200ecbd959ae410c10c0264a38cac0f5/markdown_it_py-4.2.0-py3-none-any.whl
-      - pypi: https://files.pythonhosted.org/packages/ba/9e/44565fc895f27ed7da778f98b9c7c77343ccb0f33e3e0e5b3511ff2d8eab/interpolation-2.2.7-py3-none-any.whl
-      - pypi: https://files.pythonhosted.org/packages/c0/2c/4d2006c6ef92a05d195d9ab0fc379589bbb97ec8e787306d226a92174d55/astromodels-2.3.0.dev3-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/cb/7e/127c6209613a779e9651f36cf4ab54ba0971b6b4db43495157188a6a33e6/fermipy-1.4.3.tar.gz
       - pypi: https://files.pythonhosted.org/packages/d6/cb/17a130e548ee1777f2a66e09240c531a9bf79454add7ef1198fe1e41c412/corner-2.3.0-py3-none-any.whl
-      - pypi: https://files.pythonhosted.org/packages/da/71/ae30dadffc90b9006d77af76b393cb9dfbfc9629f339fc1574a1c52e6806/future-1.0.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/e0/a9/023730ba63db1e494a271cb018dcd361bd2c917ba7004c3e49d5daf795a2/py_cpuinfo-9.0.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/e8/3d/1087453384dbde46a8c7f9356eead2c58be8a7bf156bca40243377c85715/more_itertools-11.1.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/ed/5c/9780d48c4d5effcf55fc7ab7c5651ed82b43250ac8410cce4ef1e97583ed/numexpr-2.14.2-cp312-cp312-macosx_11_0_arm64.whl
@@ -762,7 +761,6 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/ee/7f/ec3ddbb15a681f1181412fe60cc1ad945a587110f4e5b9f1faadd41ea751/astropy_healpix-2.0.1-cp310-abi3-macosx_11_0_arm64.whl
       - pypi: https://files.pythonhosted.org/packages/f2/58/bc8954bda5fcda97bd7c19be11b85f91973d67a706ed4a3aec33e7de22db/jaraco_context-6.1.2-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/f2/80/c6c776182ce08b191047310c99cd8cb5b5742a7e43b3c044ec5bbc339e77/numba-0.67.0rc1-cp312-cp312-macosx_12_0_arm64.whl
-      - pypi: https://files.pythonhosted.org/packages/f8/69/3abd02a4ba5e4d1cc46d08c8c3431bae9387759f843186550f175ce57621/threeml-2.6.1.dev1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/f9/1c/01bfd571a64e7f270e6bab5e33777debe0edc56759233ce84f27dec92d14/tqdm-4.70.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/f9/ef/2196b9bf88ffa1bde45853c72df021fbd07a8fa91a0f59a22d14a050dc04/emcee-3.1.6-py2.py3-none-any.whl
   fermi:
@@ -781,7 +779,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/aiohttp-3.14.3-py312he7e3343_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/alsa-lib-1.2.16.1-he30d5cf_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/argon2-cffi-bindings-25.1.0-py312hcd1a082_2.conda
-      - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/astropy-base-8.0.1-py312h5fde510_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/astropy-base-7.2.0-py312h5fde510_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/aws-c-auth-0.10.4-h03961ac_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/aws-c-cal-0.9.14-h6c1c863_4.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/aws-c-common-0.14.2-he30d5cf_0.conda
@@ -1008,7 +1006,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/argcomplete-3.7.1-pyhcf101f3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/argon2-cffi-25.1.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/arrow-1.4.0-pyhcf101f3_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/noarch/astropy-8.0.1-pyhd8ed1ab_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/astropy-7.2.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/astropy-iers-data-0.2026.8.3.0.53.6-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/asttokens-3.0.2-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/async-lru-2.3.0-pyhcf101f3_0.conda
@@ -1165,6 +1163,8 @@ environments:
       - conda: https://conda.anaconda.org/fermi/label/dev/linux-aarch64/fermitools-2.5.6-py312hb3f6f3f_0.conda
       - conda: https://conda.anaconda.org/fermi/noarch/fermitools-data-0.19-0.tar.bz2
       - conda: https://conda.anaconda.org/fermi/noarch/fermitools-test-scripts-data-0.5-0.conda
+      - pypi: git+https://github.com/threeML/astromodels.git?branch=dev#04f9e7f4df941b4a964761a2ea64bc8db78f2a3c
+      - pypi: git+https://github.com/threeML/threeML.git?branch=dev#6b53ddf10950521c17ff161eea685a09d629c792
       - pypi: https://files.pythonhosted.org/packages/02/36/ecc85bc96c273dc8a11273ed4782272975e6338d4a3e9228621175edf0e3/jaraco_functools-4.6.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/05/7f/798705f5296a58ca505d600456748d1be48078eac8a7050d8a98bc9edb89/decorator-5.3.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/07/18/5dd2289514303640c42b612536b9ebf396e99f6412b0b1f5dc1e1d08abb4/omegaconf-2.4.0.dev14-py3-none-any.whl
@@ -1178,7 +1178,6 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/32/fb/d08543fc15c405358504b025f56db2a89da3655bdc4b17abbb2ed66fd65e/numba-0.67.0rc1-cp312-cp312-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl
       - pypi: https://files.pythonhosted.org/packages/41/13/ed5efda74ace9a7e2e933476b85bba6d00f2ebf6b833ef59a796ec9af88c/numexpr-2.14.2-cp312-cp312-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl
       - pypi: https://files.pythonhosted.org/packages/43/81/808430a3cfe0ba5fb539b04de14f5493a4b841fdf3208a8d75e89d249533/llvmlite-0.49.0rc1-cp312-cp312-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl
-      - pypi: https://files.pythonhosted.org/packages/4c/f1/d0778ee0b47e934a1023e47fbf5cb26e871982a30fbfb6a7a3e38a3a8c2b/fermipy-1.2-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/60/60/c7504633e9fe53dc823db5d83dc15651c595cf35d668781832b4d2748272/numdifftools-0.9.42-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/7a/9c/ded2f0569b2f393f149e32126c4055400c2f692990b467bd1136ba9160af/speclite-1.0.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/7b/91/984aca2ec129e2757d1e4e3c81c3fcda9d0f85b74670a094cc443d9ee949/joblib-1.5.3-py3-none-any.whl
@@ -1188,20 +1187,18 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/82/3b/64d4899d73f91ba49a8c18a8ff3f0ea8f1c1d75481760df8c68ef5235bf5/rich-15.0.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/8f/5e/f1e1dd319e35e962a4e00b33150a8868b6329cc1d19fd533436ba5488f09/uncertainties-3.2.3-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/92/dc/5f0bc1b2cf3d829a3bb7510f54992d12d8888674d87a5da80c4d44792a00/astroquery-0.4.12.dev10885-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/b0/79/f0f1ca286b78f6f33c521a36b5cbd5bd697c0d66217d8856f443aeb9dd77/versioneer-0.29-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/b2/a3/e137168c9c44d18eff0376253da9f1e9234d0239e0ee230d2fee6cea8e55/jeepney-0.9.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/b3/38/89ba8ad64ae25be8de66a6d463314cf1eb366222074cfda9ee839c56a4b4/mdurl-0.1.2-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/b3/81/4da04ced5a082363ecfa159c010d200ecbd959ae410c10c0264a38cac0f5/markdown_it_py-4.2.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/b7/46/f5af3402b579fd5e11573ce652019a67074317e18c1935cc0b4ba9b35552/secretstorage-3.5.0-py3-none-any.whl
-      - pypi: https://files.pythonhosted.org/packages/ba/9e/44565fc895f27ed7da778f98b9c7c77343ccb0f33e3e0e5b3511ff2d8eab/interpolation-2.2.7-py3-none-any.whl
-      - pypi: https://files.pythonhosted.org/packages/c0/2c/4d2006c6ef92a05d195d9ab0fc379589bbb97ec8e787306d226a92174d55/astromodels-2.3.0.dev3-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/cb/7e/127c6209613a779e9651f36cf4ab54ba0971b6b4db43495157188a6a33e6/fermipy-1.4.3.tar.gz
       - pypi: https://files.pythonhosted.org/packages/cc/a3/ec228901fca4c996306b17f5c60a4105144df0bbd07b3a4a816f91f37b4a/tables-3.11.1-cp311-abi3-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl
       - pypi: https://files.pythonhosted.org/packages/d6/cb/17a130e548ee1777f2a66e09240c531a9bf79454add7ef1198fe1e41c412/corner-2.3.0-py3-none-any.whl
-      - pypi: https://files.pythonhosted.org/packages/da/71/ae30dadffc90b9006d77af76b393cb9dfbfc9629f339fc1574a1c52e6806/future-1.0.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/e0/a9/023730ba63db1e494a271cb018dcd361bd2c917ba7004c3e49d5daf795a2/py_cpuinfo-9.0.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/e1/3d/0cde0db89ac8dd4e5347322470530298915739f7e9b356b01c1939de8c4f/astropy_healpix-2.0.1-cp310-abi3-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl
       - pypi: https://files.pythonhosted.org/packages/e8/3d/1087453384dbde46a8c7f9356eead2c58be8a7bf156bca40243377c85715/more_itertools-11.1.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/f2/58/bc8954bda5fcda97bd7c19be11b85f91973d67a706ed4a3aec33e7de22db/jaraco_context-6.1.2-py3-none-any.whl
-      - pypi: https://files.pythonhosted.org/packages/f8/69/3abd02a4ba5e4d1cc46d08c8c3431bae9387759f843186550f175ce57621/threeml-2.6.1.dev1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/f9/1c/01bfd571a64e7f270e6bab5e33777debe0edc56759233ce84f27dec92d14/tqdm-4.70.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/f9/ef/2196b9bf88ffa1bde45853c72df021fbd07a8fa91a0f59a22d14a050dc04/emcee-3.1.6-py2.py3-none-any.whl
       osx-arm64:
@@ -1217,7 +1214,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/argcomplete-3.7.1-pyhcf101f3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/argon2-cffi-25.1.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/arrow-1.4.0-pyhcf101f3_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/noarch/astropy-8.0.1-pyhd8ed1ab_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/astropy-7.2.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/astropy-iers-data-0.2026.8.3.0.53.6-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/asttokens-3.0.2-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/async-lru-2.3.0-pyhcf101f3_0.conda
@@ -1392,7 +1389,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/aiohttp-3.14.3-py312h9f8c436_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/aom-3.14.1-pl5321h513545f_1.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/argon2-cffi-bindings-25.1.0-py312h4409184_2.conda
-      - conda: https://conda.anaconda.org/conda-forge/osx-arm64/astropy-base-8.0.1-py312hf57c059_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/osx-arm64/astropy-base-7.2.0-py312ha11c99a_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/astropy-healpix-2.0.1-py312hf57c059_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/aws-c-auth-0.10.4-h0f08c97_1.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/aws-c-cal-0.9.14-hb9ed60c_4.conda
@@ -1444,7 +1441,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/git-2.55.0-pl5321h545aa0d_1.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/glog-0.7.1-h6f9ecc1_1.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/google-crc32c-1.8.0-py312h090f823_1.conda
-      - conda: https://conda.anaconda.org/conda-forge/osx-arm64/graphite2-1.3.15-hf6b4638_1.conda
+      - conda: https://conda.anaconda.org/conda-forge/osx-arm64/graphite2-1.3.15-h784d473_1.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/h5py-3.16.0-nompi_py312h585e8c8_102.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/hdf5-2.1.0-nompi_hebe1841_110.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/healpy-1.20.0-py312hc7c58be_0.conda
@@ -1589,6 +1586,8 @@ environments:
       - conda: https://conda.anaconda.org/fermi/label/dev/osx-arm64/fermitools-2.5.6-py312ha09e789_0.conda
       - conda: https://conda.anaconda.org/fermi/noarch/fermitools-data-0.19-0.tar.bz2
       - conda: https://conda.anaconda.org/fermi/noarch/fermitools-test-scripts-data-0.5-0.conda
+      - pypi: git+https://github.com/threeML/astromodels.git?branch=dev#04f9e7f4df941b4a964761a2ea64bc8db78f2a3c
+      - pypi: git+https://github.com/threeML/threeML.git?branch=dev#6b53ddf10950521c17ff161eea685a09d629c792
       - pypi: https://files.pythonhosted.org/packages/02/36/ecc85bc96c273dc8a11273ed4782272975e6338d4a3e9228621175edf0e3/jaraco_functools-4.6.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/05/7f/798705f5296a58ca505d600456748d1be48078eac8a7050d8a98bc9edb89/decorator-5.3.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/07/18/5dd2289514303640c42b612536b9ebf396e99f6412b0b1f5dc1e1d08abb4/omegaconf-2.4.0.dev14-py3-none-any.whl
@@ -1597,7 +1596,6 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/30/2c/ebcf7b8ab6bad8667b3884a2d94f006898f75cc3e59f904a207b791529ac/ipyparallel-9.2.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/31/5b/619241afef7ac50cc246a78273c05cae8704c41424415edd40bbf1aa59c6/blosc2-4.10.1-cp312-cp312-macosx_11_0_arm64.whl
       - pypi: https://files.pythonhosted.org/packages/32/d5/f9a850d79b0851d1d4ef6456097579a9005b31fea68726a4ae5f2d82ddd9/threadpoolctl-3.6.0-py3-none-any.whl
-      - pypi: https://files.pythonhosted.org/packages/4c/f1/d0778ee0b47e934a1023e47fbf5cb26e871982a30fbfb6a7a3e38a3a8c2b/fermipy-1.2-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/60/60/c7504633e9fe53dc823db5d83dc15651c595cf35d668781832b4d2748272/numdifftools-0.9.42-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/78/74/6568c8d3aabf9982ab89fe3e378afbd7aad4894bde4570991a3246169ef4/tables-3.11.1-cp311-abi3-macosx_11_0_arm64.whl
       - pypi: https://files.pythonhosted.org/packages/7a/4e/e87e504852342df761927956359b46501698025fd3d22bef32c3c41b5bc4/llvmlite-0.49.0rc1-cp312-cp312-macosx_12_0_arm64.whl
@@ -1608,19 +1606,17 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/82/3b/64d4899d73f91ba49a8c18a8ff3f0ea8f1c1d75481760df8c68ef5235bf5/rich-15.0.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/8f/5e/f1e1dd319e35e962a4e00b33150a8868b6329cc1d19fd533436ba5488f09/uncertainties-3.2.3-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/92/dc/5f0bc1b2cf3d829a3bb7510f54992d12d8888674d87a5da80c4d44792a00/astroquery-0.4.12.dev10885-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/b0/79/f0f1ca286b78f6f33c521a36b5cbd5bd697c0d66217d8856f443aeb9dd77/versioneer-0.29-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/b3/38/89ba8ad64ae25be8de66a6d463314cf1eb366222074cfda9ee839c56a4b4/mdurl-0.1.2-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/b3/81/4da04ced5a082363ecfa159c010d200ecbd959ae410c10c0264a38cac0f5/markdown_it_py-4.2.0-py3-none-any.whl
-      - pypi: https://files.pythonhosted.org/packages/ba/9e/44565fc895f27ed7da778f98b9c7c77343ccb0f33e3e0e5b3511ff2d8eab/interpolation-2.2.7-py3-none-any.whl
-      - pypi: https://files.pythonhosted.org/packages/c0/2c/4d2006c6ef92a05d195d9ab0fc379589bbb97ec8e787306d226a92174d55/astromodels-2.3.0.dev3-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/cb/7e/127c6209613a779e9651f36cf4ab54ba0971b6b4db43495157188a6a33e6/fermipy-1.4.3.tar.gz
       - pypi: https://files.pythonhosted.org/packages/d6/cb/17a130e548ee1777f2a66e09240c531a9bf79454add7ef1198fe1e41c412/corner-2.3.0-py3-none-any.whl
-      - pypi: https://files.pythonhosted.org/packages/da/71/ae30dadffc90b9006d77af76b393cb9dfbfc9629f339fc1574a1c52e6806/future-1.0.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/e0/a9/023730ba63db1e494a271cb018dcd361bd2c917ba7004c3e49d5daf795a2/py_cpuinfo-9.0.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/e8/3d/1087453384dbde46a8c7f9356eead2c58be8a7bf156bca40243377c85715/more_itertools-11.1.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/ed/5c/9780d48c4d5effcf55fc7ab7c5651ed82b43250ac8410cce4ef1e97583ed/numexpr-2.14.2-cp312-cp312-macosx_11_0_arm64.whl
       - pypi: https://files.pythonhosted.org/packages/ed/ee/a423e857f5b45da3adc8ddbcfbfd4a0e9a047edce3915d3e3d6e189b6bd9/ndindex-1.10.1-cp312-cp312-macosx_11_0_arm64.whl
       - pypi: https://files.pythonhosted.org/packages/f2/58/bc8954bda5fcda97bd7c19be11b85f91973d67a706ed4a3aec33e7de22db/jaraco_context-6.1.2-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/f2/80/c6c776182ce08b191047310c99cd8cb5b5742a7e43b3c044ec5bbc339e77/numba-0.67.0rc1-cp312-cp312-macosx_12_0_arm64.whl
-      - pypi: https://files.pythonhosted.org/packages/f8/69/3abd02a4ba5e4d1cc46d08c8c3431bae9387759f843186550f175ce57621/threeml-2.6.1.dev1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/f9/1c/01bfd571a64e7f270e6bab5e33777debe0edc56759233ce84f27dec92d14/tqdm-4.70.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/f9/ef/2196b9bf88ffa1bde45853c72df021fbd07a8fa91a0f59a22d14a050dc04/emcee-3.1.6-py2.py3-none-any.whl
 packages:
@@ -1692,16 +1688,16 @@ packages:
   run_exports: {}
   size: 37418
   timestamp: 1762509514735
-- conda: https://conda.anaconda.org/conda-forge/linux-aarch64/astropy-base-8.0.1-py312h5fde510_0.conda
-  sha256: f31ca54fd658b88ec98fcec8c0d3619195410d9373ba381065003750bdff6177
-  md5: c96e807fadd65ce8f04e3514f0d27aff
+- conda: https://conda.anaconda.org/conda-forge/linux-aarch64/astropy-base-7.2.0-py312h5fde510_0.conda
+  sha256: a84d3e4e11eb984bb2bf79b5f339e7e6370328fad5519ba341c494733e61b62b
+  md5: a1a6d977c03ae132aba1f985684b3ada
   depends:
-  - astropy-iers-data >=0.2026.6.22.1.23.34
+  - astropy-iers-data >=0.2025.10.27.0.39.10
   - libgcc >=14
-  - numpy >=1.25,<3
-  - numpy >=2.0
-  - packaging >=25.0
-  - pyerfa >=2.0.1.3
+  - numpy >=1.23,<3
+  - numpy >=1.24
+  - packaging >=22.0.0
+  - pyerfa >=2.0.1.1
   - python >=3.12,<3.13.0a0
   - python >=3.12,<3.13.0a0 *_cpython
   - python_abi 3.12.* *_cp312
@@ -1713,8 +1709,8 @@ packages:
   purls:
   - pkg:pypi/astropy?source=hash-mapping
   run_exports: {}
-  size: 9930392
-  timestamp: 1783448071997
+  size: 9669487
+  timestamp: 1764120825003
 - conda: https://conda.anaconda.org/conda-forge/linux-aarch64/aws-c-auth-0.10.4-h03961ac_1.conda
   sha256: 6d9fe5b1e2335e7f0364da18a7467e9bea66184b189b1f3e4a103bd7ce74eee5
   md5: 3d7c8f2150a3ae6238f82a03e72771c7
@@ -5432,42 +5428,42 @@ packages:
   run_exports: {}
   size: 113854
   timestamp: 1760831179410
-- conda: https://conda.anaconda.org/conda-forge/noarch/astropy-8.0.1-pyhd8ed1ab_0.conda
-  sha256: 3d0aa4881585f5876ab165de88e2182c790c8a012062d61b2582adf229d5a23c
-  md5: d076016ed44f68effbca1c8273a74709
+- conda: https://conda.anaconda.org/conda-forge/noarch/astropy-7.2.0-pyhd8ed1ab_0.conda
+  sha256: 41ca79f6c5c6e5dd2ebbc96dae8420c914161b261d437d3de7dce0071de55318
+  md5: 8f873669e83f0d7fcbaf0b221f6963d5
   depends:
   - aiohttp
-  - astropy-base >=8.0.1,<8.0.2.0a0
-  - beautifulsoup4 >=4.11.2
+  - astropy-base >=7.2.0,<7.2.1.0a0
+  - beautifulsoup4 >=4.9.3
   - bleach >=3.2.1
-  - bottleneck >=1.4.0
+  - bottleneck >=1.3.3
   - certifi >=2022.6.15.1
   - dask-core >=2024.8.0
   - fsspec >=2023.4.0
-  - h5py >=3.11.0
+  - h5py >=3.9.0
   - html5lib >=1.1
   - ipydatagrid >=1.1.13
   - ipykernel >=6.16.0
   - ipython >=8.0.0
   - ipywidgets >=7.7.3
   - jplephem >=2.17.0
-  - matplotlib-base >=3.8.4
+  - matplotlib-base >=3.8.0
   - mpmath >=1.2.1
   - narwhals >=1.42.0
-  - pandas >=2.2.2
-  - pyarrow >=16.0
+  - pandas >=2.0
+  - pyarrow >=14.0.2
   - python >=3.11
   - pytz >=2016.10
   - s3fs >=2023.4.0
-  - scipy >=1.13
+  - scipy >=1.9.2
   - sortedcontainers >=2.1.0
   - uncompresspy >=0.4.0
   license: BSD-3-Clause
   license_family: BSD
   purls: []
   run_exports: {}
-  size: 8904
-  timestamp: 1783448025767
+  size: 9060
+  timestamp: 1764120734938
 - conda: https://conda.anaconda.org/conda-forge/noarch/astropy-iers-data-0.2026.8.3.0.53.6-pyhd8ed1ab_0.conda
   sha256: 1d075ac97fb697d7dd7fdb7526b93838a76b98591a5caee3a1bb1175d65fa771
   md5: 1d8f6c5439c1aff48203693ecb0db529
@@ -8020,16 +8016,16 @@ packages:
   run_exports: {}
   size: 34224
   timestamp: 1762509989973
-- conda: https://conda.anaconda.org/conda-forge/osx-arm64/astropy-base-8.0.1-py312hf57c059_0.conda
-  sha256: 7cd2f3e4096af1e34015d0dcaad6fdebb91c56f1a5f4cfd135b30912d182ddf9
-  md5: 7cd596f51dba6052c9d28aeb87ad4d24
+- conda: https://conda.anaconda.org/conda-forge/osx-arm64/astropy-base-7.2.0-py312ha11c99a_0.conda
+  sha256: 1d235639c72e2704e4a71548ae229f6fddd5a7599363027ee887692cfa2ad6af
+  md5: 805e724e1d067bf930ea9a342640a402
   depends:
   - __osx >=11.0
-  - astropy-iers-data >=0.2026.6.22.1.23.34
-  - numpy >=1.25,<3
-  - numpy >=2.0
-  - packaging >=25.0
-  - pyerfa >=2.0.1.3
+  - astropy-iers-data >=0.2025.10.27.0.39.10
+  - numpy >=1.23,<3
+  - numpy >=1.24
+  - packaging >=22.0.0
+  - pyerfa >=2.0.1.1
   - python >=3.12,<3.13.0a0
   - python >=3.12,<3.13.0a0 *_cpython
   - python_abi 3.12.* *_cp312
@@ -8041,8 +8037,8 @@ packages:
   purls:
   - pkg:pypi/astropy?source=hash-mapping
   run_exports: {}
-  size: 9598718
-  timestamp: 1783448840113
+  size: 9377467
+  timestamp: 1764121407665
 - conda: https://conda.anaconda.org/conda-forge/osx-arm64/astropy-healpix-2.0.1-py312hf57c059_0.conda
   sha256: 156838a149c776e04dbceaeb685d8ecc8bc24e7750069d47139ab815bf884123
   md5: 462e9eb92416efa97d7c7317a2f75711
@@ -8865,19 +8861,19 @@ packages:
   run_exports: {}
   size: 25105
   timestamp: 1768549598713
-- conda: https://conda.anaconda.org/conda-forge/osx-arm64/graphite2-1.3.15-hf6b4638_1.conda
-  sha256: 50639eae91a61864d2fac326630cb9c7eaaa008b6ee7e23079071e65c46fa210
-  md5: 38112cf8cdca130728e36e1b46f61e43
+- conda: https://conda.anaconda.org/conda-forge/osx-arm64/graphite2-1.3.15-h784d473_1.conda
+  sha256: 471f34a187fdb4f2df33e26f2e471b16c239a5b277903f643d9c3a8c9a9f44ec
+  md5: 0c7b78d9ffff4f5a6ca28d346f734d8f
   depends:
-  - __osx >=11.0
   - libcxx >=19
+  - __osx >=11.0
   license: LGPL-2.0-or-later
   purls: []
   run_exports:
     weak:
     - graphite2 >=1.3.15,<2.0a0
-  size: 82249
-  timestamp: 1786107117266
+  size: 86493
+  timestamp: 1786118637573
 - conda: https://conda.anaconda.org/conda-forge/osx-arm64/h5py-3.16.0-nompi_py312h585e8c8_102.conda
   sha256: 2ac08cff564c3b49f8a7f21eb9abdb81cad2fe2270ed1d48a5be05416d99f40c
   md5: d5c7d8decb6113045ac8168f66ad1de2
@@ -11314,6 +11310,72 @@ packages:
   md5: 961497e357980fdd94806caa7eaf8cfd
   size: 2667499163
   timestamp: 1760467309410
+- pypi: git+https://github.com/threeML/astromodels.git?branch=dev#04f9e7f4df941b4a964761a2ea64bc8db78f2a3c
+  name: astromodels
+  version: 2.6.0.dev4+4.g04f9e7f
+  requires_dist:
+  - numpy>=1.26
+  - pyyaml>=5.1
+  - scipy>=0.14
+  - astropy>=7.2
+  - dill
+  - numba
+  - llvmlite<0.46 ; platform_machine == 'x86_64' and sys_platform == 'darwin'
+  - h5py
+  - pandas
+  - tables
+  - omegaconf
+  - rich
+  - versioneer
+  - pytest ; extra == 'tests'
+  - pytest-codecov ; extra == 'tests'
+  - sphinx>=1.4 ; extra == 'docs'
+  - sphinx-rtd-theme ; extra == 'docs'
+  - nbsphinx ; extra == 'docs'
+  - sphinx-autoapi ; extra == 'docs'
+  requires_python: '>=3.11.0'
+- pypi: git+https://github.com/threeML/threeML.git?branch=dev#6b53ddf10950521c17ff161eea685a09d629c792
+  name: threeml
+  version: 2.6.1.dev1+62.g6b53ddf1
+  requires_dist:
+  - numpy>=1.26
+  - scipy>=1.13
+  - astropy
+  - matplotlib
+  - uncertainties
+  - pyyaml>=5.1
+  - dill
+  - iminuit>=2.0
+  - astromodels
+  - astroquery
+  - corner
+  - pandas
+  - requests
+  - speclite>=0.20
+  - ipython
+  - ipyparallel
+  - joblib
+  - numexpr
+  - numba
+  - numdifftools
+  - tqdm>=4.67.2
+  - omegaconf
+  - rich
+  - packaging
+  - emcee>3
+  - pytest ; extra == 'tests'
+  - pytest-codecov ; extra == 'tests'
+  - sphinx>=1.4 ; extra == 'docs'
+  - sphinx-rtd-theme ; extra == 'docs'
+  - nbsphinx ; extra == 'docs'
+  - sphinx-autoapi ; extra == 'docs'
+  - emcee>=3 ; extra == 'samplers'
+  - pymultinest ; extra == 'samplers'
+  - dynesty ; extra == 'samplers'
+  - zeus-mcmc ; extra == 'samplers'
+  - chainconsumer>=1 ; extra == 'samplers'
+  - ultranest ; extra == 'samplers'
+  requires_python: '>=3.9.0'
 - pypi: https://files.pythonhosted.org/packages/02/36/ecc85bc96c273dc8a11273ed4782272975e6338d4a3e9228621175edf0e3/jaraco_functools-4.6.0-py3-none-any.whl
   name: jaraco-functools
   version: 4.6.0
@@ -11492,19 +11554,6 @@ packages:
   version: 0.49.0rc1
   sha256: c3600bbb038805a4f4835e44f0f5f9de635fa9f1588ff534de0b784204325674
   requires_python: '>=3.10'
-- pypi: https://files.pythonhosted.org/packages/4c/f1/d0778ee0b47e934a1023e47fbf5cb26e871982a30fbfb6a7a3e38a3a8c2b/fermipy-1.2-py3-none-any.whl
-  name: fermipy
-  version: '1.2'
-  sha256: 6c2c7802bcd63c70412a988ee74ce64dd1e513fa990b0dbc5e85ff3355e085e9
-  requires_dist:
-  - numpy>=1.16
-  - pyyaml
-  - scipy
-  - astropy
-  - matplotlib>=3.3
-  - gammapy>=0.18
-  - healpy
-  - astropy-healpix
 - pypi: https://files.pythonhosted.org/packages/50/2e/ebdb85a8da151397a2790363676b7ed7c125924fe618e4c6d8befb0cc62c/msgpack-1.2.1-cp312-cp312-macosx_11_0_arm64.whl
   name: msgpack
   version: 1.2.1
@@ -11670,6 +11719,13 @@ packages:
   - botocore ; extra == 'all'
   - regions>=0.5 ; extra == 'all'
   requires_python: '>=3.10'
+- pypi: https://files.pythonhosted.org/packages/b0/79/f0f1ca286b78f6f33c521a36b5cbd5bd697c0d66217d8856f443aeb9dd77/versioneer-0.29-py3-none-any.whl
+  name: versioneer
+  version: '0.29'
+  sha256: 0f1a137bb5d6811e96a79bb0486798aeae9b9c6efc24b389659cebb0ee396cb9
+  requires_dist:
+  - tomli ; python_full_version < '3.11' and extra == 'toml'
+  requires_python: '>=3.7'
 - pypi: https://files.pythonhosted.org/packages/b2/a3/e137168c9c44d18eff0376253da9f1e9234d0239e0ee230d2fee6cea8e55/jeepney-0.9.0-py3-none-any.whl
   name: jeepney
   version: 0.9.0
@@ -11730,37 +11786,20 @@ packages:
   - cryptography>=2.0
   - jeepney>=0.6
   requires_python: '>=3.10'
-- pypi: https://files.pythonhosted.org/packages/ba/9e/44565fc895f27ed7da778f98b9c7c77343ccb0f33e3e0e5b3511ff2d8eab/interpolation-2.2.7-py3-none-any.whl
-  name: interpolation
-  version: 2.2.7
-  sha256: 8e3d3841ba0208054c5b5c1e6ed5f40645f7b6e060cf492683d936b95965e090
+- pypi: https://files.pythonhosted.org/packages/cb/7e/127c6209613a779e9651f36cf4ab54ba0971b6b4db43495157188a6a33e6/fermipy-1.4.3.tar.gz
+  name: fermipy
+  version: 1.4.3
+  sha256: 8bb2537481cafd256484f1e747a92dac2e0cf3e6eedb4a7a172ef6aa36d879ef
   requires_dist:
-  - numba>=0.59.1
-  - scipy>=1.10,<2.0
-  requires_python: '>=3.9'
-- pypi: https://files.pythonhosted.org/packages/c0/2c/4d2006c6ef92a05d195d9ab0fc379589bbb97ec8e787306d226a92174d55/astromodels-2.3.0.dev3-py3-none-any.whl
-  name: astromodels
-  version: 2.3.0.dev3
-  sha256: d878386c0ee151b0fce752327eacaddf5bb2d6cfd29859ca5ac127a1e0298679
-  requires_dist:
-  - numpy>=1.6
-  - pyyaml>=5.1
-  - scipy>=0.14
-  - astropy>=1.2
-  - dill
-  - future
-  - interpolation
-  - numba
-  - h5py
-  - pandas
-  - tables
-  - colorama
-  - omegaconf
-  - sphinx>=1.4 ; extra == 'docs'
-  - sphinx-rtd-theme ; extra == 'docs'
-  - nbsphinx ; extra == 'docs'
-  - sphinx-autoapi ; extra == 'docs'
-  - pytest ; extra == 'tests'
+  - numpy>=1.16
+  - pyyaml
+  - scipy<1.18
+  - astropy<8
+  - matplotlib>=3.3
+  - gammapy>=2.0
+  - healpy
+  - astropy-healpix
+  - regions<0.12
 - pypi: https://files.pythonhosted.org/packages/cc/a3/ec228901fca4c996306b17f5c60a4105144df0bbd07b3a4a816f91f37b4a/tables-3.11.1-cp311-abi3-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl
   name: tables
   version: 3.11.1
@@ -11792,11 +11831,6 @@ packages:
   - pytest ; extra == 'test'
   - scipy ; extra == 'test'
   requires_python: '>=3.9'
-- pypi: https://files.pythonhosted.org/packages/da/71/ae30dadffc90b9006d77af76b393cb9dfbfc9629f339fc1574a1c52e6806/future-1.0.0-py3-none-any.whl
-  name: future
-  version: 1.0.0
-  sha256: 929292d34f5872e70396626ef385ec22355a1fae8ad29e1a734c3e43f9fbc216
-  requires_python: '>=2.6,!=3.0.*,!=3.1.*,!=3.2.*'
 - pypi: https://files.pythonhosted.org/packages/e0/a9/023730ba63db1e494a271cb018dcd361bd2c917ba7004c3e49d5daf795a2/py_cpuinfo-9.0.0-py3-none-any.whl
   name: py-cpuinfo
   version: 9.0.0
@@ -11873,49 +11907,6 @@ packages:
   - llvmlite>=0.49.0.dev0,<0.50
   - numpy>=1.22,<2.6
   requires_python: '>=3.10'
-- pypi: https://files.pythonhosted.org/packages/f8/69/3abd02a4ba5e4d1cc46d08c8c3431bae9387759f843186550f175ce57621/threeml-2.6.1.dev1-py3-none-any.whl
-  name: threeml
-  version: 2.6.1.dev1
-  sha256: 793d7e3b229d8b1edbd02261dc783325b9f6cf050d7f37ebf52f097a5197ce6f
-  requires_dist:
-  - numpy>=1.26
-  - scipy>=1.13
-  - astropy
-  - matplotlib
-  - uncertainties
-  - pyyaml>=5.1
-  - dill
-  - iminuit>=2.0
-  - astromodels
-  - astroquery
-  - corner
-  - pandas
-  - requests
-  - speclite>=0.20
-  - ipython
-  - ipyparallel
-  - joblib
-  - numexpr
-  - numba
-  - numdifftools
-  - tqdm>=4.67.2
-  - omegaconf
-  - rich
-  - packaging
-  - emcee>3
-  - pytest ; extra == 'tests'
-  - pytest-codecov ; extra == 'tests'
-  - sphinx>=1.4 ; extra == 'docs'
-  - sphinx-rtd-theme ; extra == 'docs'
-  - nbsphinx ; extra == 'docs'
-  - sphinx-autoapi ; extra == 'docs'
-  - emcee>=3 ; extra == 'samplers'
-  - pymultinest ; extra == 'samplers'
-  - dynesty ; extra == 'samplers'
-  - zeus-mcmc ; extra == 'samplers'
-  - chainconsumer ; extra == 'samplers'
-  - ultranest ; extra == 'samplers'
-  requires_python: '>=3.9.0'
 - pypi: https://files.pythonhosted.org/packages/f9/1c/01bfd571a64e7f270e6bab5e33777debe0edc56759233ce84f27dec92d14/tqdm-4.70.0-py3-none-any.whl
   name: tqdm
   version: 4.70.0
