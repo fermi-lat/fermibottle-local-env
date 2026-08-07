@@ -23,7 +23,7 @@ depends-on = [
 ]
 
 [dependencies]
-setuptools = "*"
+setuptools = "<81" # Py 3.12 drops pkg_sources 
 wheel = "*"
 git = "*"
 pipx = "*"

@@ -33,9 +33,6 @@ cd "$TESTING_BASE"
 
 # --- Git Clone ---
 git clone "$REPO_URL"
-git clone "https://github.com/USRA-STI/gdt-fermi.git"
-git clone "https://github.com/FermiSummerSchool/fermi-summer-school.git"
-git clone "https://github.com/fermi-lat/AnalysisThreads.git"
 
 cd ScienceTools/
 # --- Create Directory ---
@@ -48,15 +45,20 @@ cd ScienceTools/
 
 # cd /home/fermi/FB_TESTING/test_results/
 cd "$TESTING_BASE"/test_results/
-../ScienceTools/recipe/tests/ST-unit-test -w -d -v
-../ScienceTools/recipe/tests/ST-AGN-thread-test -w -d -v
 pytest --junitxml=fermipy_results.xml -vv --pyargs fermipy
 pytest --junitxml=threeml_results.xml -vv --pyargs threeML
+../ScienceTools/recipe/tests/ST-unit-test -w -d -v
+../ScienceTools/recipe/tests/ST-AGN-thread-test -w -d -v
+
 # -n auto
 # pytest --junitxml=threeml_results.xml -vv --pyargs astromodels
 
 # cd /home/fermi/FB_TESTING/AnalysisThreads/SourceAnalysis
-cd "$TESTING_BASE"/AnalysisThreads/SourceAnalysis
+
+
+# cd "$TESTING_BASE"
+# git clone "https://github.com/fermi-lat/AnalysisThreads.git"
+# cd "$TESTING_BASE"/AnalysisThreads/SourceAnalysis
 
 
 # Currently failing
@@ -87,6 +89,9 @@ cd "$TESTING_BASE"/AnalysisThreads/SourceAnalysis
 ### cd ../fermi-summer-school/
 ### pytest --nbmake --nbmake-timeout=1000000 --junitxml=/home/fermi/FB_TESTING/test_results/fss_Likelihood_adv_result.xml -vv Likelihood_Advanced/*.ipynb
 
+# cd "$TESTING_BASE"
+# git clone "https://github.com/FermiSummerSchool/fermi-summer-school.git"
+
 
 # cd /home/fermi/FB_TESTING/fermi-summer-school/
 # pytest -n auto --nbmake --nbmake-timeout=3000 --junitxml=/home/fermi/FB_TESTING/test_results/data_quicklook_result.xml -vv Data_Exploration/*.ipynb
@@ -98,6 +103,9 @@ cd "$TESTING_BASE"/AnalysisThreads/SourceAnalysis
 # pytest -n auto --nbmake -n auto --nbmake-timeout=3000 --junitxml=../FB_TESTING/test_results/fss_like_adv_sed_result.xml -vv Likelihood_Advanced/SED\ Stuff.ipynb
 
 # conda deactivate
+# cd "$TESTING_BASE"
+# git clone "https://github.com/USRA-STI/gdt-fermi.git"
+
 # conda activate fermigbm
 # cd /home/fermi/FB_TESTING/gdt-fermi/docs/notebooks
 # for f in *.tar; do tar -xf "$f"; done
